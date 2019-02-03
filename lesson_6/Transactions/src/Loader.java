@@ -10,7 +10,7 @@ public class Loader {
 
 
         //количество аккаунтов в банке
-        int AccountsNumber = 100;
+        int AccountsNumber = 200;
         int TransactionNumber = 2000;
 
         Bank bank = new Bank();

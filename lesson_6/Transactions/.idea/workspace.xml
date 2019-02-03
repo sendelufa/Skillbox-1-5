@@ -2,21 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d71cd778-2a81-4f76-b368-5740cedb784f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Bank/Exceptions/BankException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Bank/Exceptions/BankTransactionAccountIsLocked.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Bank/Exceptions/BankTransactionAmountBelowMinimum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Bank/Exceptions/BankTransactionIsFraud.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Bank/Exceptions/BankTransactionNull.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Bank/Exceptions/BankTransactionSenderNotEnoughMoney.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Bank/Exceptions/BankTransactionAddMoneyOverflow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Bank/Tests/AccountTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Bank/Tests/BankTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Bank/Tests/TransferTaskTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lesson_4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transactions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Transactions.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Transactions/Bank/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Transactions/Bank/Account.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Transactions/Bank/Bank.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Transactions/Bank/Bank.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Transactions/Bank/BankHandles.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Transactions/Loader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Transactions/Loader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Bank/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bank/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Bank/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bank/Bank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bank/BankHandles.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Loader.java" afterDir="false" />
     </list>
     <ignored path="Transactions.iws" />
@@ -39,30 +37,28 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Bank/Account.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="533">
-              <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
+            <state relative-caret-position="760">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
               <folding>
-                <element signature="e#349#350#0" expanded="true" />
-                <element signature="e#424#425#0" expanded="true" />
+                <element signature="e#346#347#0" expanded="true" />
+                <element signature="e#430#431#0" expanded="true" />
                 <element signature="e#486#487#0" expanded="true" />
                 <element signature="e#514#515#0" expanded="true" />
                 <element signature="e#423#424#0" expanded="true" />
                 <element signature="e#451#452#0" expanded="true" />
                 <element signature="e#548#549#0" expanded="true" />
                 <element signature="e#577#578#0" expanded="true" />
-                <element signature="e#697#698#0" expanded="true" />
-                <element signature="e#731#732#0" expanded="true" />
-                <element signature="e#800#801#0" expanded="true" />
+                <element signature="e#954#955#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Bank/TransferTask.java">
+        <entry file="file://$PROJECT_DIR$/src/Bank/Exceptions/BankTransactionAddMoneyOverflow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="57">
+              <caret line="6" column="44" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -70,14 +66,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Bank/Bank.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="665">
-              <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+            <state relative-caret-position="127">
+              <caret line="132" selection-start-line="132" selection-end-line="132" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#848#862#0" expanded="true" />
-                <element signature="method#isFraud#0;class#Bank#0" />
+                <element signature="method#transfer#0;class#Bank#0" />
                 <element signature="method#generateTransferStream#0;class#Bank#0" />
+                <element signature="method#processTransaction#0;class#Bank#0" />
                 <element signature="method#validateTransaction#0;class#Bank#0" />
+                <element signature="method#getBalance#0;class#Bank#0" />
                 <element signature="method#generateAccounts#0;class#Bank#0" />
               </folding>
             </state>
@@ -87,8 +85,45 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Loader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+            <state relative-caret-position="190">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Bank/Tests/BankTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#406#407#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Bank/Tests/TransferTaskTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="532">
+              <caret line="37" column="3" lean-forward="true" selection-start-line="37" selection-start-column="3" selection-end-line="41" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Bank/Tests/AccountTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="817">
+              <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="50" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -121,14 +156,18 @@
         <option value="$PROJECT_DIR$/src/Bank/BankHandles.java" />
         <option value="$PROJECT_DIR$/src/Bank/Exceptions/BankException.java" />
         <option value="$PROJECT_DIR$/src/Bank/Exceptions/BankSenderNotEnoughMoney.java" />
-        <option value="$PROJECT_DIR$/src/Bank/Account.java" />
         <option value="$PROJECT_DIR$/src/Bank/Exceptions/BankTransactionAccountIsLocked.java" />
         <option value="$PROJECT_DIR$/src/Bank/Exceptions/BankTransactionNull.java" />
         <option value="$PROJECT_DIR$/src/Bank/Exceptions/BankTransactionAmountBelowMinimum.java" />
         <option value="$PROJECT_DIR$/src/Bank/Exceptions/BankTransactionSenderNotEnoughMoney.java" />
         <option value="$PROJECT_DIR$/src/Bank/Exceptions/BankTransactionIsFraud.java" />
-        <option value="$PROJECT_DIR$/src/Bank/Bank.java" />
         <option value="$PROJECT_DIR$/src/Loader.java" />
+        <option value="$PROJECT_DIR$/src/Bank/Exceptions/BankTransactionAddMoneyOverflow.java" />
+        <option value="$PROJECT_DIR$/src/Bank/Account.java" />
+        <option value="$PROJECT_DIR$/src/Bank/Tests/AccountTest.java" />
+        <option value="$PROJECT_DIR$/src/Bank/Tests/TransferTaskTest.java" />
+        <option value="$PROJECT_DIR$/src/Bank/Bank.java" />
+        <option value="$PROJECT_DIR$/src/Bank/Tests/BankTest.java" />
       </list>
     </option>
   </component>
@@ -156,12 +195,6 @@
               <item name="Transactions" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Transactions" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Transactions" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Bank" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -172,8 +205,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../методички/unit12/bank04/Transactions (optimal)" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../M7/lesson_5/TextAnalyzer" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
@@ -196,7 +229,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Loader">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -258,6 +291,54 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Transactions" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Bank.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Bank.Tests" />
+      <option name="MAIN_CLASS_NAME" value="Bank.Tests.AccountTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BankTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Transactions" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Bank.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Bank.Tests" />
+      <option name="MAIN_CLASS_NAME" value="Bank.Tests.BankTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TransferTaskTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Transactions" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Bank.Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Bank.Tests" />
+      <option name="MAIN_CLASS_NAME" value="Bank.Tests.TransferTaskTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -285,6 +366,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Loader" />
+        <item itemvalue="JUnit.AccountTest" />
+        <item itemvalue="JUnit.TransferTaskTest" />
+        <item itemvalue="JUnit.BankTest" />
       </list>
     </recent_temporary>
   </component>
@@ -301,19 +385,50 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="BankTest - 2019.02.04 at 01h 13m 24s.xml">
+      <configuration name="BankTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BankTest - 2019.02.04 at 01h 14m 03s.xml">
+      <configuration name="BankTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BankTest - 2019.02.04 at 01h 14m 42s.xml">
+      <configuration name="BankTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BankTest - 2019.02.04 at 01h 16m 38s.xml">
+      <configuration name="BankTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BankTest - 2019.02.04 at 01h 20m 14s.xml">
+      <configuration name="BankTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BankTest - 2019.02.04 at 01h 20m 40s.xml">
+      <configuration name="BankTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BankTest - 2019.02.04 at 01h 23m 52s.xml">
+      <configuration name="BankTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TransferTaskTest - 2019.02.04 at 01h 24m 00s.xml">
+      <configuration name="TransferTaskTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccountTest - 2019.02.04 at 01h 24m 05s.xml">
+      <configuration name="AccountTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AccountTest - 2019.02.04 at 01h 24m 16s.xml">
+      <configuration name="AccountTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="ToolWindowManager">
     <frame x="1913" y="-356" width="2062" height="1136" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25874126" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Palette&#9;" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.3292517" />
+      <window_info anchor="bottom" id="Messages" weight="0.32922202" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3292517" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.8159393" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33586338" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.32068312" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -466,33 +581,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bank/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
-          <folding>
-            <element signature="e#349#350#0" expanded="true" />
-            <element signature="e#424#425#0" expanded="true" />
-            <element signature="e#486#487#0" expanded="true" />
-            <element signature="e#514#515#0" expanded="true" />
-            <element signature="e#423#424#0" expanded="true" />
-            <element signature="e#451#452#0" expanded="true" />
-            <element signature="e#548#549#0" expanded="true" />
-            <element signature="e#577#578#0" expanded="true" />
-            <element signature="e#697#698#0" expanded="true" />
-            <element signature="e#731#732#0" expanded="true" />
-            <element signature="e#800#801#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bank/TransferTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/Runnable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
@@ -500,27 +588,167 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bank/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="e#346#347#0" expanded="true" />
+            <element signature="e#430#431#0" expanded="true" />
+            <element signature="e#486#487#0" expanded="true" />
+            <element signature="e#514#515#0" expanded="true" />
+            <element signature="e#423#424#0" expanded="true" />
+            <element signature="e#451#452#0" expanded="true" />
+            <element signature="e#548#549#0" expanded="true" />
+            <element signature="e#577#578#0" expanded="true" />
+            <element signature="e#954#955#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bank/TransferTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bank/Exceptions/BankTransactionAddMoneyOverflow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="6" column="44" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Bank/Bank.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+        <state relative-caret-position="127">
+          <caret line="132" selection-start-line="132" selection-end-line="132" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#848#862#0" expanded="true" />
-            <element signature="method#isFraud#0;class#Bank#0" />
+            <element signature="method#transfer#0;class#Bank#0" />
             <element signature="method#generateTransferStream#0;class#Bank#0" />
+            <element signature="method#processTransaction#0;class#Bank#0" />
             <element signature="method#validateTransaction#0;class#Bank#0" />
+            <element signature="method#getBalance#0;class#Bank#0" />
             <element signature="method#generateAccounts#0;class#Bank#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bank/Tests/BankTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#406#407#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bank/Tests/TransferTaskTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="37" column="3" lean-forward="true" selection-start-line="37" selection-start-column="3" selection-end-line="41" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bank/Tests/AccountTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="817">
+          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="50" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Loader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+        <state relative-caret-position="190">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Transactions</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>hamcrest-core-1.3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

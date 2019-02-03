@@ -33,7 +33,7 @@ public class Bank {
     private ExecutorService exProcessTransactions = Executors.newFixedThreadPool(16);
     private List<Future<?>> tasksProcessTransactions = new ArrayList<>();
 
-    public synchronized boolean isFraud(String fromAccountNum, String toAccountNum, long amount)
+    private synchronized boolean isFraud(String fromAccountNum, String toAccountNum, long amount)
             throws InterruptedException {
         Thread.sleep(1000);
         return random.nextBoolean();
@@ -130,8 +130,6 @@ public class Bank {
             for (Future ft : tasksGenerateTransactions) {
                 if (!ft.isDone()) allTasksDone = false;
             }
-            System.out.println("all tasksGenerateTransactions \"generateTransferStreamConcurrent\" not done - sleep;");
-
         }
         exGenerateTransactions.shutdown();
     }
@@ -181,8 +179,12 @@ public class Bank {
             //процесс перевода денег
             //забираем деньги у отправителя
 
-            tt.getSender().addMoney(-tt.getAmount());
-            tt.getRecipient().addMoney(tt.getAmount());
+            try {tt.getSender().addMoney(-tt.getAmount());
+            tt.getRecipient().addMoney(tt.getAmount());}
+            catch (BankTransactionAddMoneyOverflow e) {
+                e.printStackTrace();
+                return;
+            }
         } catch (BankTransactionIsFraud bankTransactionIsFraud) {
             return;
         } finally {
@@ -232,11 +234,15 @@ public class Bank {
 
 
     public void generateAccounts(int counts) {
-        Random random = new Random(1L);
+        Random random = new Random();
         for (int i = 0; i < counts; i++) {
             String accNumber = String.valueOf(Math.abs(random.nextLong()));
             accounts.put(accNumber, new Account(random.nextInt(MAX_ACCOUNT_MONEY), accNumber));
         }
 
+    }
+
+    public HashMap<String, Account> getAccounts() {
+        return accounts;
     }
 }

@@ -1,6 +1,7 @@
 package Bank;
 
-import java.util.HashMap;
+
+import Bank.Exceptions.*;
 
 /**
  * Created by Danya on 18.02.2016.
@@ -10,7 +11,7 @@ public class Account {
     private String accNumber;
     private boolean locked;
 
-    Account(long money, String accNumber) {
+    public Account(long money, String accNumber) {
         this.accNumber = accNumber;
         this.money = money;
         locked = false;
@@ -34,7 +35,10 @@ public class Account {
         return locked;
     }
 
-    public void addMoney(long money) {
+    public void addMoney(long money) throws BankTransactionAddMoneyOverflow {
+        if (this.money+money < 0) {
+                throw new BankTransactionAddMoneyOverflow();
+        }
         this.money += money;
     }
 
