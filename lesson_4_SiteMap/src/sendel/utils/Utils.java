@@ -6,7 +6,6 @@ package sendel.utils;
 
 import java.io.*;
 import java.util.Map;
-import java.util.TreeSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -62,6 +61,6 @@ public class Utils {
             e.printStackTrace();
             return "Ошибка записи файла!";
         }
-        return "Ссылки успешно записаны в файл: " + file.getPath();
+        return "\n\n =====\nСсылки успешно записаны в файл: " + file.getPath();
     }
 }

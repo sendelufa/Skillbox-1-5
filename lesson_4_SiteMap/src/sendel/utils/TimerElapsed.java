@@ -6,22 +6,17 @@ package sendel.utils;
 
 import GUI.Forms.MainForm;
 
-import javax.swing.*;
-
 //класс для подсчета врермя выполнения в отдельном потоке
 public class TimerElapsed extends Thread {
     long startTime;
     MainForm mainForm;
     long timeElapsed;
     boolean isStop = false;
+    boolean isPause = false;
 
     public TimerElapsed(MainForm mainForm) {
         startTime = System.currentTimeMillis();
         this.mainForm = mainForm;
-    }
-
-    public long getTimeElapsed() {
-        return timeElapsed;
     }
 
     @Override
@@ -32,8 +27,11 @@ public class TimerElapsed extends Thread {
             if (isStop) break;
             //пройденное время
             timeElapsed = System.currentTimeMillis() - startTime;
+            if (isPause) {
+                startTime += 100;
+            }
             try {
-                sleep(500);
+                sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
                 isStop = true;
@@ -45,5 +43,12 @@ public class TimerElapsed extends Thread {
             mainForm.writeTimeElapsed(minutes + ":" + sec);
         }
         System.out.println("Завершение потока таймера = " + currentThread().getName());
+    }
+
+    public void Pause(){
+        isPause = true;
+    }
+    public void Play(){
+        isPause = false;
     }
 }

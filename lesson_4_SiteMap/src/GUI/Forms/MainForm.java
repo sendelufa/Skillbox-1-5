@@ -18,15 +18,16 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Map;
+
+import static java.lang.Thread.sleep;
 
 public class MainForm {
-    TimerElapsed timer;
-    File outputFile = null;
+    private TimerElapsed timer;
+    private File outputFile = null;
     //Количество потоков  = количеству поток физического процессора (для win)
-    int numThreads = Runtime.getRuntime().availableProcessors();
+    private int numThreads = Runtime.getRuntime().availableProcessors() * 2;
     //int numThreads = 3;
-    ArrayList<LinkParser> lpThreads = new ArrayList<>(numThreads);
+    private ArrayList<LinkParser> lpThreads = new ArrayList<>(numThreads);
     private JPanel mainPanel;
     private JTextField txtSiteURL;
     private JTextArea txtLog;
@@ -94,6 +95,7 @@ public class MainForm {
                         }
 
                         for (int i = 0; i < numThreads; i++) {
+                            lpThreads.get(i).setName("ParseThread-" + i);
                             lpThreads.get(i).start();
                         }
 
@@ -110,40 +112,51 @@ public class MainForm {
                                     countFinish = 0;
                                     for (int i = 0; i < numThreads; i++) {
                                         if (!lpThreads.get(i).isWorking()) countFinish++;
+
+                                    }
+                                    try {
+                                        sleep(500);
+                                    } catch (InterruptedException e1) {
+                                        e1.printStackTrace();
                                     }
 
                                 }
-                                if (!LinkParser.isStop()) {LinkParser.endAllThreadsRegular(true);}
+                                if (!LinkParser.isStop()) {
+                                    LinkParser.endAllThreadsRegular(true);
+                                }
                                 timer.interrupt();
                                 getBtnPause().setEnabled(false);
                                 getBtnStartStop().setText("START");
                                 getBtnStartStop().setEnabled(true);
                                 isParseWorking = false;
-                                // TODO проверка на штатное завершение
+
                                 if (LinkParser.isRegularStop()) {
                                     writeLog(Utils.writeSiteMapToFile(LinkParser.getLinksMap(), outputFile));
                                 }
-                                caret.setUpdatePolicy(DefaultCaret.UPDATE_WHEN_ON_EDT);
-
-                                //выводим содержимаое MAP
-                                for (Map.Entry<String, String> pair : LinkParser.getLinksMap().entrySet()) {
-                                    System.out.println(pair.getKey() + "=" + pair.getValue());
+                                else
+                                {
+                                    writeLog("========================================");
+                                    writeLog("  Выполнение прервано, файл не записан!");
+                                    writeLog("========================================");
                                 }
+                                caret.setUpdatePolicy(DefaultCaret.UPDATE_WHEN_ON_EDT);
                             }
                         });
 
                         statusThread.start();
-
 
                     } else {
                         getTxtLog().setText("неверный URL");
                     }
                 } else {
                     //завершаем все потоки
+
                     getBtnStartStop().setEnabled(false);
+                    getBtnPause().setEnabled(false);
                     isParseWorking = false;
                     LinkParser.endAllThreads();
                     timer.interrupt();
+                    writeLog("\t -> Останавливается парсинг, пожалуйста ждите...");
 
                 }
             }
@@ -158,14 +171,42 @@ public class MainForm {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (LinkParser.isPause()) {
+                    writeLog("\t -> Парсинг продолжен");
                     getBtnPause().setText("Pause");
                     for (int i = 0; i < numThreads; i++) {
                         LinkParser.AllPlay();
                     }
-                    ;
+                    timer.Play();
                 } else {
+
+                    writeLog("\t -> Парсинг ставится на паузу...");
                     getBtnPause().setText("Play");
+                    getBtnPause().setEnabled(false);
+                    getBtnStartStop().setEnabled(false);
                     LinkParser.AllPause();
+                    //если вставли на паузу - активируем кнопки
+                    boolean AllInPause = false;
+                    while (!AllInPause) {
+                        AllInPause = true;
+                        for (int i = 0; i < lpThreads.size(); i++) {
+                            if (!lpThreads.get(i).isStatePause()) {
+                                AllInPause = false;
+                            }
+                        }
+
+                        try {
+                            sleep(50);
+                        } catch (InterruptedException e1) {
+                            e1.printStackTrace();
+                        }
+
+                    }
+
+                    writeLog("\t -> Парсинг поставлен на паузу. Для продолжения нажмите Play");
+                    getBtnPause().setEnabled(true);
+                    getBtnStartStop().setEnabled(true);
+
+                    timer.Pause();
                 }
             }
         });
@@ -206,7 +247,6 @@ public class MainForm {
 
     public void writeLog(String log) {
         getTxtLog().append(log + "\n");
-        //pnlLogScroll.set
     }
 
     public void writeNumberLinks(String str) {
@@ -216,7 +256,6 @@ public class MainForm {
     public void writeTimeElapsed(String str) {
         lblInfoTimePassed.setText(str);
     }
-
 
     //обнуляем форму
     public void resetForm() {

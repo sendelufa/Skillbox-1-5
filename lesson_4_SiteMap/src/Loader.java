@@ -16,6 +16,5 @@ public class Loader {
         MainFormUI frame = new MainFormUI();
         //запускаем форму
         frame.InitUI();
-
     }
 }

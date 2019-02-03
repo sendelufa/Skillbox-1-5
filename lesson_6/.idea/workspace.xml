@@ -2,33 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72950030-38ac-4ed4-98cb-4ffb9d02855a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../lesson_3/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson_3/src/GUI/TxtConst.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson_4/.idea/artifacts/111.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson_4/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson_4/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson_4/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson_4/src/GUI/FileChooser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson_4/src/GUI/Forms/MainForm.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson_4/src/GUI/Forms/MainForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson_4/src/GUI/MainFormUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson_4/src/Loader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson_4/src/SiteMap/LinkParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson_4/src/sendel/utils/TimerElapsed.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lesson_4/src/sendel/utils/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lesson_1/GUIMultithreading/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lesson_1/GUIMultithreading/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lesson_1/GUIMultithreading/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lesson_1/GUIMultithreading/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lesson_1/GUIMultithreading/out/production/GUIMultithreading/Form.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lesson_1/GUIMultithreading/out/production/GUIMultithreading/Form.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lesson_3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lesson_3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lesson_3/out/production/lesson_3/GUI/Form/StopWatchForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lesson_3/out/production/lesson_3/GUI/Form/StopWatchForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lesson_3/out/production/lesson_3/GUI/GUI/StopWatchUI$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lesson_3/out/production/lesson_3/GUI/GUI/StopWatchUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lesson_3/out/production/lesson_3/GUI/GUI/StopWatchUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lesson_3/out/production/lesson_3/Loader.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lesson_3/out/production/lesson_3/Loader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lesson_3/out/production/lesson_3/StopWatch/StopWatch.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lesson_3/out/production/lesson_3/StopWatch/StopWatch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lesson_3/src/GUI/Form/StopWatchForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lesson_3/src/GUI/Form/StopWatchForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lesson_3/src/GUI/GUI/StopWatchUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lesson_3/src/GUI/GUI/StopWatchUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lesson_3/src/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lesson_3/src/Loader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lesson_3/src/StopWatch/StopWatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lesson_3/src/StopWatch/StopWatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lesson_4" beforeDir="false" />
     </list>
     <ignored path="ThreadSafety.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,10 +42,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1911" />
-    <option name="y" value="-358" />
-    <option name="width" value="2578" />
-    <option name="height" value="1420" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1022" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -212,9 +186,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1913" y="-356" width="2062" height="1136" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="817" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13686314" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13892618" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Palette&#9;" order="3" />
