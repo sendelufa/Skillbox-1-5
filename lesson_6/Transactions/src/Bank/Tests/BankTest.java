@@ -1,20 +1,22 @@
+package Bank.Tests;
+
+import Bank.*;
+import Bank.Exceptions.*;
+import org.junit.*;
+
 /**
  * Project Transactions
  * Created by Shibkov Konstantin on 03.02.2019.
  */
-package Bank.Tests;
-
-import Bank.Bank;
-import org.junit.*;
-
 
 public class BankTest {
-    Bank bank;
+    private Bank bank;
 
     @Before
-    public void init() {
+    public void init() throws BankException {
         bank = new Bank();
         bank.generateAccounts(10);
+        bank.generateTransferStreamConcurrent(10);
     }
 
     @Test
@@ -43,5 +45,39 @@ public class BankTest {
         }
         Assert.assertTrue(isMoneyUpZero);
     }
+
+    @Test(expected = BankAccountNotExist.class)
+    public void getBalanceAccountNotExistTest() throws BankException {
+        bank.getBalance("44");
+    }
+
+    @Test(expected = BankTransferCountBelowOne.class)
+    public void generateTransferStreamConcurrentBelowZeroTest() throws BankException {
+        bank.generateTransferStreamConcurrent(0);
+    }
+
+    @Test(expected = BankTransactionAccountIsLocked.class)
+    public void generateTransferAccountLockedTest() throws BankException {
+        for (String key : bank.getAccounts().keySet()){
+            Account acc = bank.getAccounts().get(key);
+            acc.lock();
+            bank.getAccounts().put(key, acc);
+        }
+        bank.processTransaction();
+    }
+
+    @Test(expected = BankTransactionSenderNotEnoughMoney.class)
+    public void generateTransferSenderRecipientAmountBelowZero() throws BankException {
+        for (String key : bank.getAccounts().keySet()){
+            Account acc = bank.getAccounts().get(key);
+            acc.addMoney(-acc.getMoney());
+            bank.getAccounts().put(key, acc);
+        }
+        bank.processTransaction();
+    }
+
+
+
+
 
 }

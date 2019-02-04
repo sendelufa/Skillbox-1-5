@@ -1,7 +1,4 @@
-/**
- * Project Transactions
- * Created by Shibkov Konstantin on 03.02.2019.
- */
+
 package Bank.Tests;
 
 import Bank.Account;
@@ -14,6 +11,11 @@ import org.junit.runners.Parameterized;
 
 import java.util.Arrays;
 import java.util.Collection;
+
+/**
+ * Project Transactions
+ * Created by Shibkov Konstantin on 03.02.2019.
+ */
 
 @RunWith(Parameterized.class)
 public class AccountTest {
@@ -43,7 +45,7 @@ public class AccountTest {
     }
 
     @Test
-    public void AccountTest() {
+    public void AccountTestCreate() {
         boolean correctInit = true;
         if (acc.isLocked()) {correctInit = false;}
         if (acc.getMoney() != money) {correctInit = false;}

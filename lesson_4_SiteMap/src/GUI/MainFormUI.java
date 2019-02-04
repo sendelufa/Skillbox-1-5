@@ -11,12 +11,13 @@ import java.awt.*;
 
 
 public class MainFormUI {
-    final int FRAME_WIDTH = 600; //длина X окна
-    final int FRAME_HEIGHT = 600; //длина Y окна
+    private final int FRAME_WIDTH = 600; //длина X окна
+    private final int FRAME_HEIGHT = 600; //длина Y окна
     private JFrame frame;
     private MainForm mainForm;
 
     public MainFormUI() {
+
         frame = new JFrame("Sitemap");
     }
 
@@ -39,10 +40,6 @@ public class MainFormUI {
             mainForm.getBtnChooseOutputFile().requestFocus();
         });
     }
-
-
-
-
 
 
 }

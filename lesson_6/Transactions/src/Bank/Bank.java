@@ -47,12 +47,18 @@ public class Bank {
      * метод isFraud. Если возвращается true, то делается блокировка
      * счетов (как – на ваше усмотрение)
      */
-    public void transfer() {
+    public void transfer(){
         //System.out.println(tasksTransactions.size() + " --<");
         //создаем задачу для формирования списка задач для потоков
         int queueSize = tasksTransactions.size();
         for (int i = 0; i < queueSize; i++) {
-            tasksProcessTransactions.add(exProcessTransactions.submit(this::processTransaction));
+            tasksProcessTransactions.add(exProcessTransactions.submit(()   -> {
+                try {
+                    processTransaction();
+                } catch (BankException e) {
+                    e.getStackTrace();
+                }
+            }));
 
         }
 
@@ -111,7 +117,10 @@ public class Bank {
     }
 
     //генерация списка транзакций в многопоточном режиме
-    public void generateTransferStreamConcurrent(int count) {
+    public void generateTransferStreamConcurrent(int count) throws BankException {
+        if (count < 1) {
+            throw new BankTransferCountBelowOne();
+        }
         //создаем задачу для формирования списка транзакций
         for (int i = 0; i < 10; i++) {
             tasksGenerateTransactions.add(exGenerateTransactions.submit(() -> generateTransferStream(count / 10)));
@@ -135,7 +144,7 @@ public class Bank {
     }
 
     //обработка одной транзакции
-    private void processTransaction() {
+    public void processTransaction() throws BankException {
         TransferTask tt;
 
 
@@ -150,11 +159,9 @@ public class Bank {
         //если вылетит исключение - заврешаем обработку транзакции
         lock.writeLock().lock();
         try {
-            try {
+
                 validateTransaction(tt);
-            } catch (BankException be) {
-                return;
-            }
+
 
             //проверяем транзакцию у службы безопасности
             boolean isFraud = false;
@@ -179,12 +186,9 @@ public class Bank {
             //процесс перевода денег
             //забираем деньги у отправителя
 
-            try {tt.getSender().addMoney(-tt.getAmount());
-            tt.getRecipient().addMoney(tt.getAmount());}
-            catch (BankTransactionAddMoneyOverflow e) {
-                e.printStackTrace();
-                return;
-            }
+            tt.getSender().addMoney(-tt.getAmount());
+            tt.getRecipient().addMoney(tt.getAmount());
+
         } catch (BankTransactionIsFraud bankTransactionIsFraud) {
             return;
         } finally {
@@ -221,8 +225,11 @@ public class Bank {
     /**
      * TODO: реализовать метод. Возвращает остаток на счёте.
      */
-    public long getBalance(String accountNum) {
+    public long getBalance(String accountNum) throws BankAccountNotExist {
         long money;
+        if (!accounts.containsKey(accountNum)){
+            throw new BankAccountNotExist();
+        }
         lock.readLock().lock();
         try {
             money = accounts.get(accountNum).getMoney();

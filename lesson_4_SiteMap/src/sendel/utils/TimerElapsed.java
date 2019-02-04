@@ -1,18 +1,19 @@
-/**
- * Project SiteMap
- * Created by Shibkov Konstantin on 22.01.2019.
- */
 package sendel.utils;
 
 import GUI.Forms.MainForm;
 
+/**
+ * Project SiteMap
+ * Created by Shibkov Konstantin on 22.01.2019.
+ */
+
 //класс для подсчета врермя выполнения в отдельном потоке
 public class TimerElapsed extends Thread {
-    long startTime;
-    MainForm mainForm;
-    long timeElapsed;
-    boolean isStop = false;
-    boolean isPause = false;
+    private long startTime;
+    private MainForm mainForm;
+    private long timeElapsed;
+    private boolean isStop = false;
+    private boolean isPause = false;
 
     public TimerElapsed(MainForm mainForm) {
         startTime = System.currentTimeMillis();
@@ -22,9 +23,9 @@ public class TimerElapsed extends Thread {
     @Override
     public void run() {
         currentThread().setName("TimerElapsed");
-        for (; ; ) {
-            //обработка завершения потока
-            if (isStop) break;
+        while (!isStop){
+            /*//обработка завершения потока
+            if (isStop) break;*/
             //пройденное время
             timeElapsed = System.currentTimeMillis() - startTime;
             if (isPause) {
@@ -40,7 +41,8 @@ public class TimerElapsed extends Thread {
             int seconds = (int) (timeElapsed / 1000) % 60;
             String sec = seconds < 10 ? "0" + seconds : String.valueOf(seconds);
             int minutes = (int) ((timeElapsed / (1000 * 60)) % 60);
-            mainForm.writeTimeElapsed(minutes + ":" + sec);
+            int hours = (int) ((timeElapsed / (1000 * 60*60)) % 60);
+            mainForm.writeTimeElapsed(hours + ":" + minutes + ":" + sec);
         }
         System.out.println("Завершение потока таймера = " + currentThread().getName());
     }

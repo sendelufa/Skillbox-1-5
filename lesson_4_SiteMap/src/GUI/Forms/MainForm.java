@@ -1,7 +1,3 @@
-/**
- * Project SiteMap.SiteMap
- * Created by Shibkov Konstantin on 18.01.2019.
- */
 package GUI.Forms;
 
 import GUI.FileChooser;
@@ -12,14 +8,17 @@ import sendel.utils.Utils;
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.text.DefaultCaret;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
 import java.util.ArrayList;
 
 import static java.lang.Thread.sleep;
+
+/**
+ * Project SiteMap.SiteMap
+ * Created by Shibkov Konstantin on 18.01.2019.
+ */
 
 public class MainForm {
     private TimerElapsed timer;
@@ -44,7 +43,7 @@ public class MainForm {
     public MainForm() {
         //прокурчиваем txtLog всегда к нижней строке используя DefaultCaret
         DefaultCaret caret = (DefaultCaret) txtLog.getCaret();
-
+        pnlLogScroll.setOpaque(true);
 
         //выделяем весь текст при клике на поле, для удобной вставки ссылки
         txtSiteURL.addMouseListener(new MouseAdapter() {
@@ -53,161 +52,148 @@ public class MainForm {
                 if (!txtSiteURL.isFocusOwner()) txtSiteURL.selectAll();
             }
         });
-        btnChooseOutputFile.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                //Запрашиваем новый файл через диалоговое окно SAVE
-                File chosenFile = FileChooser.chooseFile(new FileNameExtensionFilter("Text File (.txt)", "txt"));
+        btnChooseOutputFile.addActionListener(e -> {
+            //Запрашиваем новый файл через диалоговое окно SAVE
+            File chosenFile = FileChooser.chooseFile(new FileNameExtensionFilter("Text File (.txt)", "txt"));
 
-                //Если файл не выбран - не меняем файл для сохранения
-                if (chosenFile != null) outputFile = chosenFile;
+            //Если файл не выбран - не меняем файл для сохранения
+            if (chosenFile != null) outputFile = chosenFile;
 
-                //выводим информацию о результате выбора файла
-                getLblFileChosen().setText(outputFile != null ? outputFile.getPath() : "файл не выбран");
-                //если файл выбран - активируем кнопку старт
-                getBtnStartStop().setEnabled(outputFile != null);
-            }
+            //выводим информацию о результате выбора файла
+            getLblFileChosen().setText(outputFile != null ? outputFile.getPath() : "файл не выбран");
+            //если файл выбран - активируем кнопку старт
+            getBtnStartStop().setEnabled(outputFile != null);
         });
-        btnStartStop.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (!isParseWorking) {
-                    //прокурчиваем txtLog всегда к нижней строке используя DefaultCaret
-                    caret.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE);
-                    //флаг работы парсера
-                    isParseWorking = true;
-                    //меняем надпись на кнопке
-                    getBtnStartStop().setText("STOP");
-                    getBtnPause().setEnabled(true);
-                    //читаем адрес сайта из текстового поля
-                    String inputURL = getTxtSiteURL().getText().trim();
-                    inputURL = Utils.addTailSlash(inputURL);
-                    getTxtSiteURL().setText(inputURL);
-                    //если URL верный по формату - запускаем парсинг
-                    if (Utils.isValidURL(inputURL)) {
+        btnStartStop.addActionListener(e -> {
+            if (!isParseWorking) {
+                //прокурчиваем txtLog всегда к нижней строке используя DefaultCaret
+                caret.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE);
+                //флаг работы парсера
+                isParseWorking = true;
+                //меняем надпись на кнопке
+                getBtnStartStop().setText("STOP");
+                getBtnPause().setEnabled(true);
+                //читаем адрес сайта из текстового поля
+                String inputURL = getTxtSiteURL().getText().trim();
+                inputURL = Utils.addTailSlash(inputURL);
+                getTxtSiteURL().setText(inputURL);
+                //если URL верный по формату - запускаем парсинг
+                if (Utils.isValidURL(inputURL)) {
 
 
-                        lpThreads = new ArrayList<>(numThreads);
-                        LinkParser.resetParser(inputURL, Utils.getHost(inputURL), getForm());
+                    lpThreads = new ArrayList<>(numThreads);
+                    LinkParser.resetParser(inputURL, Utils.getHost(inputURL), getForm());
 
-                        for (int i = 0; i < numThreads; i++) {
-                            lpThreads.add(new LinkParser());
-                        }
-
-                        for (int i = 0; i < numThreads; i++) {
-                            lpThreads.get(i).setName("ParseThread-" + i);
-                            lpThreads.get(i).start();
-                        }
-
-                        //запускаем таймер для подсчета времени
-                        timer = new TimerElapsed(getForm());
-                        timer.start();
-
-                        //поток проверяет все ли потоки парсинга завершены
-                        Thread statusThread = new Thread(new Runnable() {
-                            @Override
-                            public void run() {
-                                int countFinish = -1;
-                                while (countFinish != numThreads) {
-                                    countFinish = 0;
-                                    for (int i = 0; i < numThreads; i++) {
-                                        if (!lpThreads.get(i).isWorking()) countFinish++;
-
-                                    }
-                                    try {
-                                        sleep(500);
-                                    } catch (InterruptedException e1) {
-                                        e1.printStackTrace();
-                                    }
-
-                                }
-                                if (!LinkParser.isStop()) {
-                                    LinkParser.endAllThreadsRegular(true);
-                                }
-                                timer.interrupt();
-                                getBtnPause().setEnabled(false);
-                                getBtnStartStop().setText("START");
-                                getBtnStartStop().setEnabled(true);
-                                isParseWorking = false;
-
-                                if (LinkParser.isRegularStop()) {
-                                    writeLog(Utils.writeSiteMapToFile(LinkParser.getLinksMap(), outputFile));
-                                }
-                                else
-                                {
-                                    writeLog("========================================");
-                                    writeLog("  Выполнение прервано, файл не записан!");
-                                    writeLog("========================================");
-                                }
-                                caret.setUpdatePolicy(DefaultCaret.UPDATE_WHEN_ON_EDT);
-                            }
-                        });
-
-                        statusThread.start();
-
-                    } else {
-                        getTxtLog().setText("неверный URL");
-                    }
-                } else {
-                    //завершаем все потоки
-
-                    getBtnStartStop().setEnabled(false);
-                    getBtnPause().setEnabled(false);
-                    isParseWorking = false;
-                    LinkParser.endAllThreads();
-                    timer.interrupt();
-                    writeLog("\t -> Останавливается парсинг, пожалуйста ждите...");
-
-                }
-            }
-        });
-        btnClearLog.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                getTxtLog().setText("");
-            }
-        });
-        btnPause.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (LinkParser.isPause()) {
-                    writeLog("\t -> Парсинг продолжен");
-                    getBtnPause().setText("Pause");
                     for (int i = 0; i < numThreads; i++) {
-                        LinkParser.AllPlay();
+                        lpThreads.add(new LinkParser());
                     }
-                    timer.Play();
-                } else {
 
-                    writeLog("\t -> Парсинг ставится на паузу...");
-                    getBtnPause().setText("Play");
-                    getBtnPause().setEnabled(false);
-                    getBtnStartStop().setEnabled(false);
-                    LinkParser.AllPause();
-                    //если вставли на паузу - активируем кнопки
-                    boolean AllInPause = false;
-                    while (!AllInPause) {
-                        AllInPause = true;
-                        for (int i = 0; i < lpThreads.size(); i++) {
-                            if (!lpThreads.get(i).isStatePause()) {
-                                AllInPause = false;
+                    for (int i = 0; i < numThreads; i++) {
+                        lpThreads.get(i).setName("ParseThread-" + i);
+                        lpThreads.get(i).start();
+                    }
+
+                    //запускаем таймер для подсчета времени
+                    timer = new TimerElapsed(getForm());
+                    timer.start();
+
+                    //поток проверяет все ли потоки парсинга завершены
+                    Thread statusThread = new Thread(() -> {
+                        int countFinish = -1;
+                        while (countFinish != numThreads) {
+                            countFinish = 0;
+                            for (int i = 0; i < numThreads; i++) {
+                                if (!lpThreads.get(i).isWorking()) countFinish++;
+
                             }
-                        }
+                            try {
+                                sleep(500);
+                            } catch (InterruptedException e1) {
+                                e1.printStackTrace();
+                            }
 
-                        try {
-                            sleep(50);
-                        } catch (InterruptedException e1) {
-                            e1.printStackTrace();
                         }
+                        if (!LinkParser.isStop()) {
+                            LinkParser.endAllThreadsRegular(true);
+                        }
+                        timer.interrupt();
+                        getBtnPause().setEnabled(false);
+                        getBtnStartStop().setText("START");
+                        getBtnStartStop().setEnabled(true);
+                        isParseWorking = false;
 
+                        if (LinkParser.isRegularStop()) {
+                            writeLog(Utils.writeSiteMapToFile(LinkParser.getLinksMap(), outputFile));
+                        } else {
+                            writeLog("========================================");
+                            writeLog("  Выполнение прервано, файл не записан!");
+                            writeLog("========================================");
+                        }
+                        caret.setUpdatePolicy(DefaultCaret.UPDATE_WHEN_ON_EDT);
+                    });
+
+                    statusThread.start();
+
+                } else {
+                    getTxtLog().setText("неверный URL");
+                }
+            } else {
+                //завершаем все потоки
+
+                getBtnStartStop().setEnabled(false);
+                getBtnPause().setEnabled(false);
+                isParseWorking = false;
+                LinkParser.endAllThreads();
+                timer.interrupt();
+                writeLog("\t -> Останавливается парсинг, пожалуйста ждите...");
+
+            }
+        });
+        btnClearLog.addActionListener(e -> getTxtLog().setText(""));
+        btnPause.addActionListener(e -> {
+            if (LinkParser.isPause()) {
+                writeLog("\t -> Парсинг продолжен");
+                getBtnPause().setText("Pause");
+                for (int i = 0; i < numThreads; i++) {
+                    LinkParser.AllPlay();
+                }
+                timer.Play();
+            } else {
+
+                writeLog("\t -> Парсинг ставится на паузу...");
+                getBtnPause().setText("Play");
+                getBtnPause().setEnabled(false);
+                getBtnStartStop().setEnabled(false);
+                LinkParser.AllPause();
+                //если вставли на паузу - активируем кнопки
+                boolean AllInPause = false;
+                while (!AllInPause) {
+                    AllInPause = true;
+                    for (LinkParser lp : lpThreads) {
+                        if (!lp.isStatePause()) {
+                            AllInPause = false;
+                        }
                     }
 
-                    writeLog("\t -> Парсинг поставлен на паузу. Для продолжения нажмите Play");
-                    getBtnPause().setEnabled(true);
-                    getBtnStartStop().setEnabled(true);
+                   /* for (int i = 0; i < lpThreads.size(); i++) {
+                        if (!lpThreads.get(i).isStatePause()) {
+                            AllInPause = false;
+                        }
+                    }*/
 
-                    timer.Pause();
+                    try {
+                        sleep(50);
+                    } catch (InterruptedException e1) {
+                        e1.printStackTrace();
+                    }
+
                 }
+
+                writeLog("\t -> Парсинг поставлен на паузу. Для продолжения нажмите Play");
+                getBtnPause().setEnabled(true);
+                getBtnStartStop().setEnabled(true);
+
+                timer.Pause();
             }
         });
     }
@@ -220,19 +206,19 @@ public class MainForm {
         return btnChooseOutputFile;
     }
 
-    public JLabel getLblFileChosen() {
+    private JLabel getLblFileChosen() {
         return lblFileChosen;
     }
 
-    public JButton getBtnStartStop() {
+    private JButton getBtnStartStop() {
         return btnStartStop;
     }
 
-    public JTextField getTxtSiteURL() {
+    private JTextField getTxtSiteURL() {
         return txtSiteURL;
     }
 
-    public JTextArea getTxtLog() {
+    private JTextArea getTxtLog() {
         return txtLog;
     }
 
@@ -241,7 +227,7 @@ public class MainForm {
         return this;
     }
 
-    public JButton getBtnPause() {
+    private JButton getBtnPause() {
         return btnPause;
     }
 

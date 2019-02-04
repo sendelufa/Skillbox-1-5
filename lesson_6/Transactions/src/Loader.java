@@ -1,4 +1,5 @@
 import Bank.*;
+import Bank.Exceptions.BankException;
 
 /**
  * Project Transactions
@@ -6,11 +7,11 @@ import Bank.*;
  */
 
 public class Loader {
-    public static void main(String[] args){
+    public static void main(String[] args) throws BankException {
 
 
         //количество аккаунтов в банке
-        int AccountsNumber = 200;
+        int AccountsNumber = 500;
         int TransactionNumber = 2000;
 
         Bank bank = new Bank();
