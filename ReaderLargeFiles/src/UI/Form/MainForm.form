@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="UI.Form.MainForm">
-  <grid id="27dc6" binding="rootPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+  <grid id="27dc6" binding="rootPanel" layout-manager="BorderLayout" hgap="5" vgap="5">
     <constraints>
       <xy x="20" y="20" width="900" height="600"/>
     </constraints>
@@ -18,7 +18,7 @@
           <component id="73f2c" class="javax.swing.JButton" binding="btnSelectFile">
             <constraints/>
             <properties>
-              <text value="Open file..."/>
+              <text value="Открыть файл..."/>
             </properties>
           </component>
           <component id="fc857" class="javax.swing.JLabel" binding="lblFilePath">
@@ -31,27 +31,15 @@
           </component>
         </children>
       </grid>
-      <grid id="aa9a0" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+      <grid id="aa9a0" layout-manager="FlowLayout" hgap="20" vgap="5" flow-align="2">
         <constraints border-constraint="South"/>
         <properties/>
         <border type="none"/>
         <children>
-          <component id="a7e1f" class="javax.swing.JLabel">
+          <component id="a7e1f" class="javax.swing.JLabel" binding="lblFileInfo">
             <constraints/>
             <properties>
               <text value="Строка:"/>
-            </properties>
-          </component>
-          <component id="3aca9" class="javax.swing.JTextField" binding="textField1" default-binding="true">
-            <constraints/>
-            <properties>
-              <preferredSize width="100" height="30"/>
-            </properties>
-          </component>
-          <component id="ceb0a" class="javax.swing.JButton" binding="перейтиButton" default-binding="true">
-            <constraints/>
-            <properties>
-              <text value="Перейти"/>
             </properties>
           </component>
         </children>
@@ -62,7 +50,7 @@
           <editable value="false"/>
           <enabled value="true"/>
           <font name="Arial" size="14"/>
-          <text value="ячсячсчяс"/>
+          <text value=""/>
         </properties>
       </component>
       <grid id="5d26d" layout-manager="BorderLayout" hgap="0" vgap="0">
@@ -116,6 +104,20 @@
                       <text value="⇓ 10"/>
                     </properties>
                   </component>
+                  <grid id="5c062" layout-manager="FlowLayout" hgap="5" vgap="150" flow-align="1">
+                    <constraints border-constraint="Center"/>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="4049c" class="javax.swing.JTextPane" binding="lblDescTextPane" default-binding="true">
+                        <constraints/>
+                        <properties>
+                          <opaque value="false"/>
+                          <text value="Перемещение&#10;по строкам"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
                 </children>
               </grid>
             </children>
@@ -125,8 +127,9 @@
       <component id="28848" class="javax.swing.JScrollBar" binding="scrBarTextView">
         <constraints border-constraint="East"/>
         <properties>
-          <blockIncrement value="10"/>
+          <blockIncrement value="1"/>
           <maximum value="1000"/>
+          <valueIsAdjusting value="false"/>
           <visibleAmount value="1"/>
         </properties>
       </component>

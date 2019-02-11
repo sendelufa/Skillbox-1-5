@@ -5,13 +5,14 @@
 package UI.Form;
 
 import javax.swing.*;
-import java.awt.event.*;
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.util.Formatter;
 
 import File.*;
 
-public class MainForm extends JFrame{
+public class MainForm extends JFrame {
     private JPanel rootPanel;
     private JButton btnSelectFile;
     private JLabel lblFilePath;
@@ -22,29 +23,16 @@ public class MainForm extends JFrame{
     private JButton btnForward_100;
     private JButton btnPrev_10;
     private JButton btnForward_10;
-    private JTextField textField1;
-    private JButton перейтиButton;
     private JScrollBar scrBarTextView;
+    private JLabel lblFileInfo;
+    private JTextPane lblDescTextPane;
 
     private ReaderLargeFiles reader;
 
+    private boolean isScrollBarMustChange = true;
+    private int scrollBarLastValue = 0;
 
     public MainForm() {
-
-
-        //тест
-        try {
-            reader = new ReaderLargeFiles(new File("E:\\Skillbox\\Java\\M13\\.answer\\res\\numbers.txt"), txtFileView, scrBarTextView);
-            setScrollMaxValue();
-            System.out.println(scrBarTextView.getMaximum());
-            reader.movePointer(0);
-            reader.readFileLines(0);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        //тест
-
-
         btnSelectFile.addActionListener(e -> {
 
             File inputFile = FileChooser.OpenFile();
@@ -52,10 +40,10 @@ public class MainForm extends JFrame{
             if (inputFile != null) {
                 lblFilePath.setText(inputFile.getPath());
                 try {
-                    reader = new ReaderLargeFiles(inputFile, txtFileView, scrBarTextView);
+                    reader = new ReaderLargeFiles(inputFile);
                     setScrollMaxValue();
                     reader.movePointer(0);
-                    reader.readFileLines(0);
+                    setTextAreaReadLines(0);
 
                 } catch (IOException e1) {
                     e1.printStackTrace();
@@ -66,43 +54,46 @@ public class MainForm extends JFrame{
 
         });
 
+        //go forward
         ForwardToBeginFile.addActionListener(e -> {
-
             reader.movePointer(0);
-            reader.readFileLines(0);
-
+            setTextAreaReadLines(0);
         });
+        btnForward_100.addActionListener(e -> setTextAreaReadLines(100));
+        btnForward_10.addActionListener(e -> setTextAreaReadLines(10));
 
-        btnForwardToEndFile.addActionListener(e -> reader.readFileLines(1));
-        btnForward_100.addActionListener(e -> reader.readFileLines(100));
-        btnForward_10.addActionListener(e -> reader.readFileLines(10));
+        //go back
+        btnForwardToEndFile.addActionListener(e -> {
+            reader.movePointer(scrBarTextView.getMaximum());
+            setTextAreaReadLines(0);
+        });
+        btnPrev_100.addActionListener(e -> setTextAreaReadLines(-100));
+        btnPrev_10.addActionListener(e -> setTextAreaReadLines(-10));
+
         //обработка скроллинга мыши
         txtFileView.addMouseWheelListener(e -> {
             int linesToScroll = e.getWheelRotation();
-            reader.readFileLines(linesToScroll);
+            setTextAreaReadLines(linesToScroll);
         });
-        //обработка изменения scrollbara
+
+        //обработка изменения scrollbar
         scrBarTextView.addAdjustmentListener(e -> {
-            //System.out.println(e.getAdjustmentType());
-            if (e.getAdjustmentType() < 5) {
-                reader.movePointer((long) e.getValue());
-                reader.readFileLines(1);
+            int diffValue = e.getValue() - scrollBarLastValue;
+            if (isScrollBarMustChange) {
+                if (diffValue <= 0) {
+                    reader.movePointer((long) e.getValue() - 1);
+                    setTextAreaReadLines(0);
+                } else {
+                    reader.movePointer((long) e.getValue());
+                    setTextAreaReadLines(1);
+                }
+                isScrollBarMustChange = false;
+                scrBarTextView.setValue(reader.getPointer());
             }
-            //System.out.println(reader.getFile().startPointer);
-
-
+            isScrollBarMustChange = true;
+            scrollBarLastValue = scrBarTextView.getValue();
         });
 
-
-    }
-
-    //обнуляем форму
-    public void resetForm() {
-
-    }
-
-    public JLabel getLblFilePath() {
-        return lblFilePath;
     }
 
     public JPanel getRootPanel() {
@@ -113,13 +104,33 @@ public class MainForm extends JFrame{
         return btnSelectFile;
     }
 
-    private void setScrollMaxValue() throws IOException {
-        long fileLenght = reader.getFileLength();
-        if (fileLenght > Integer.MAX_VALUE) {
-            fileLenght = Integer.MAX_VALUE;
+    private void setScrollMaxValue() {
+        long fileLength = reader.getFileLength();
+        //hide scrollBar if file length very large
+        if (fileLength > Integer.MAX_VALUE) {
+            scrBarTextView.setPreferredSize(new Dimension(0, 0));
         }
-        scrBarTextView.setValue((int)fileLenght - 20);
+        scrBarTextView.setMaximum((int) fileLength);
 
+
+    }
+
+    private void setStringToTextArea(String str) {
+        txtFileView.setText(str);
+    }
+
+    private void setTextAreaReadLines(int lines) {
+        reader.readFileLines(lines);
+        isScrollBarMustChange = false;
+        scrBarTextView.setValue(reader.getPointer());
+        setStringToTextArea(reader.getResult());
+        Formatter f = new Formatter();
+
+
+        float percent = ((float)reader.getPointer() / (float)reader.getFileLength()) * 100;
+        f.format("%3.1f", percent);
+        lblFileInfo.setText(reader.getPointer() + "/" + reader.getFileLength() +
+                " символов (" + f + "%)");
     }
 
 

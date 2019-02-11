@@ -1,6 +1,6 @@
 /**
- * Project StopWatch.StopWatch
- * Created by Shibkov Konstantin on 18.01.2019.
+ * Project ReaderLargeFiles
+ * Created by Shibkov Konstantin on 06.02.2019.
  */
 package UI.Form;
 
@@ -34,7 +34,6 @@ public class UiHandler {
             frame.setLocationRelativeTo(null); //выравниваем окно по центру экрана
             frame.setVisible(true);
 
-            mainForm.resetForm();
             mainForm.getBtnSelectFile().requestFocus();
         });
     }

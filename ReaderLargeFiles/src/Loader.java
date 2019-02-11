@@ -1,8 +1,6 @@
-import File.FileHandling;
 import UI.Form.UiHandler;
 
 import javax.swing.*;
-import java.io.IOException;
 
 /**
  * Project ReaderLargeFiles
@@ -11,9 +9,7 @@ import java.io.IOException;
 
 public class Loader {
 
-    private static FileHandling worker;
-
-    public static void main(String[] args) throws IOException, ClassNotFoundException, UnsupportedLookAndFeelException, InstantiationException, IllegalAccessException {
+    public static void main(String[] args) throws ClassNotFoundException, UnsupportedLookAndFeelException, InstantiationException, IllegalAccessException {
         //создаем основную форму
         UiHandler ui = new UiHandler();
         //запускаем форму
