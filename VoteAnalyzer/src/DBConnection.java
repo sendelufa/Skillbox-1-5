@@ -4,14 +4,14 @@ import java.sql.*;
  * Created by Danya on 24.02.2016.
  */
 public class DBConnection {
+    private final static String dbName = "learn";
+    private final static String dbUser = "root";
+    private final static String dbPass = "12345";
+    private final static int bufferSize = 500_000;
+    private final static int gapBufferNumbers = 5;
     private static Connection connection;
-
-    private static String dbName = "learn";
-    private static String dbUser = "root";
-    private static String dbPass = "12345";
-
     private static StringBuilder builder = new StringBuilder();
-    private static int bufferSize = 256_000;
+    private static int i = 0;
 
     public static Connection getConnection() {
         if (connection == null) {
@@ -43,8 +43,7 @@ public class DBConnection {
         }
         if (builder.length() == 0) {
             builder.append("INSERT INTO voter_count(name, birthDate, `count`) VALUES");
-        }
-        else {
+        } else {
             builder.append(",");
         }
 
@@ -57,6 +56,11 @@ public class DBConnection {
         DBConnection.getConnection().createStatement()
                 .execute(builder.toString());
         builder = new StringBuilder();
+        i++;
+        if (i % gapBufferNumbers == 0) {
+            System.out.print(gapBufferNumbers * i + " = пройдено буферов за ");
+            System.out.println((System.currentTimeMillis() - Loader.start) + "ms");
+        }
     }
 
     public static void printVoterCounts() throws SQLException {

@@ -11,34 +11,30 @@ public class WorkTime
     /**
      * Set of TimePeriod objects
      */
-    public WorkTime()
-    {      }
-
     public void addVisitTime(long visitTime)
     {
         Date visit = new Date(visitTime);
-        TimePeriod newPeriod = new TimePeriod(visit, visit);
         for(TimePeriod period : periods)
         {
-            if(period.compareTo(newPeriod) == 0)
+            if(period.isSameDay(visitTime))
             {
                 period.appendTime(visit);
                 return;
             }
         }
-        periods.add(new TimePeriod(visit, visit));
+        periods.add(new TimePeriod(visit));
     }
 
     public String toString()
     {
-        String line = "";
+        StringBuilder line = new StringBuilder();
         for(TimePeriod period : periods)
         {
-            if(!line.isEmpty()) {
-                line += ", ";
+            if(!(line.length() == 0)) {
+                line.append(", ");
             }
-            line += period;
+            line.append(period);
         }
-        return line;
+        return line.toString();
     }
 }

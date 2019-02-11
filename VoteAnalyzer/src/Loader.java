@@ -7,12 +7,13 @@ import java.io.File;
  */
 public class Loader
 {
+    public static long start;
 
     public static void main(String[] args) throws Exception
     {
 
-        String fileName = "res/data-1M.xml";
-        long start = System.currentTimeMillis();
+        String fileName = "res/data-1572M.xml";
+        start = System.currentTimeMillis();
         parseFile(fileName);
         System.out.println((System.currentTimeMillis() - start) + "ms");
     }
