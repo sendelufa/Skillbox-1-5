@@ -6,15 +6,13 @@ import java.util.TreeSet;
  */
 public class WorkTime
 {
-    private TreeSet<TimePeriod> periods;
+    private TreeSet<TimePeriod> periods = new TreeSet<>();
 
     /**
      * Set of TimePeriod objects
      */
     public WorkTime()
-    {
-        periods = new TreeSet<>();
-    }
+    {      }
 
     public void addVisitTime(long visitTime)
     {
