@@ -7,14 +7,14 @@ public class LoaderOneTh {
     private static PrintWriter writer;
 
     private static StringBuffer builder = new StringBuffer();
-    private static int bufferSize = 1_000_000;
+    private static int bufferSize = 500_000;
     private static char letters[] = {'У', 'К', 'Е', 'Н', 'Х', 'В', 'А', 'Р', 'О', 'С', 'М', 'Т'};
 
     public static void main(String[] args) throws Exception {
 
         long start = System.currentTimeMillis();
 
-        writer = new PrintWriter("C:\\Users\\sendel\\Desktop\\1\\numbers.txt");
+        writer = new PrintWriter("res/numbers.txt");
 
         for (int number = 1; number < 300; number++) {
             for (int regionCode = 1; regionCode < 100; regionCode++) {

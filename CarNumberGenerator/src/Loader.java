@@ -15,7 +15,7 @@ public class Loader {
     private static int bufferSize = 500_000;
     private static char letters[] = {'У', 'К', 'Е', 'Н', 'Х', 'В', 'А', 'Р', 'О', 'С', 'М', 'Т'};
 
-    private static int threads = 16;
+    private static int threads = 32;
     private static PrintWriter[] writer = new PrintWriter[threads];
     private static ReentrantLock[] lock = new ReentrantLock[threads];
     //организация пула потоков для генерации списка транзакци в многопоточном режиме
@@ -30,7 +30,7 @@ public class Loader {
         long start = System.currentTimeMillis();
 
         for (int i = 0; i < writer.length; i++) {
-            writer[i] = new PrintWriter("C:\\Users\\sendel\\Desktop\\1\\numbers" + i + ".txt");
+            writer[i] = new PrintWriter("res/numbers" + i + ".txt");
         }
         for (int i = 0; i < lock.length; i++) {
             lock[i] = new ReentrantLock();
@@ -64,30 +64,21 @@ public class Loader {
     }
 
 
-    private static synchronized void generateLetters() {
+    private static void generateLetters() {
         StringBuffer builder = new StringBuffer();
+
+        String[] strThreads = Thread.currentThread().getName().split("-");
+        int threadNumber = Integer.parseInt(strThreads[3]) - 1;
+
         int number = queue.poll();
-        String str;
-        str = number < 10 ? "00" : "0";
+        String str = number < 10 ? "00" : "0";
         for (int regionCode = 1; regionCode < 100; regionCode++) {
             for (char firstLetter : letters) {
                 for (char secondLetter : letters) {
                     for (char thirdLetter : letters) {
                         if (builder.length() > bufferSize) {
-                            boolean writeSuccess = false;
-                            while (!writeSuccess) {
-                                for (int i = 0; i < threads; i++) {
-                                    if (lock[i].tryLock()) {
-                                        lock[i].lock();
-                                        writer[i].write(builder.toString());
-                                        lock[i].unlock();
-                                        builder = new StringBuffer();
-                                        writeSuccess = true;
-                                        break;
-                                    }
-                                }
-                            }
-
+                            writer[threadNumber].write(builder.toString());
+                            builder = new StringBuffer();
                         }
                         builder.append(firstLetter);
                         builder.append(str);
@@ -105,20 +96,10 @@ public class Loader {
                 }
             }
         }
-
-        boolean writeSuccess = false;
-        while (!writeSuccess) {
-            for (int i = 0; i < writer.length; i++) {
-                if (lock[i].tryLock()) {
-                    lock[i].lock();
-                    writer[i].write(builder.toString());
-                    lock[i].unlock();
-                    writeSuccess = true;
-                    break;
-                }
-            }
-        }
+        writer[threadNumber].write(builder.toString());
 
 
     }
+
+
 }
