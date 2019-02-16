@@ -1,0 +1,1010 @@
+<voters>
+<voter name="Запорцов Димитриан" birthDay="1990.06.17">
+	<visit station="120" time="2015.09.21 23:04:33" />
+</voter>
+<voter name="Сизов Оттон" birthDay="1988.01.01">
+	<visit station="109" time="2015.09.19 19:17:37" />
+</voter>
+<voter name="Бескараваев Лермонт" birthDay="1964.06.22">
+	<visit station="125" time="2015.09.21 16:18:45" />
+</voter>
+<voter name="Шумяцкий Емельян" birthDay="1958.09.30">
+	<visit station="73" time="2015.09.21 20:07:49" />
+</voter>
+<voter name="Прокошкин Савин" birthDay="1936.04.23">
+	<visit station="177" time="2015.09.21 17:22:02" />
+</voter>
+<voter name="Могильный Ким" birthDay="1966.08.17">
+	<visit station="10" time="2015.09.19 13:48:08" />
+</voter>
+<voter name="Паратов Герольд" birthDay="1956.02.15">
+	<visit station="43" time="2015.09.21 20:44:21" />
+</voter>
+<voter name="Созонов Эней" birthDay="1964.11.07">
+	<visit station="76" time="2015.09.21 16:59:18" />
+</voter>
+<voter name="Борыков Гелиан" birthDay="1927.03.23">
+	<visit station="55" time="2015.09.19 14:53:00" />
+</voter>
+<voter name="Шерстюк Антроп" birthDay="1997.08.11">
+	<visit station="12" time="2015.09.21 20:59:00" />
+</voter>
+<voter name="Борин Назим" birthDay="1926.05.16">
+	<visit station="14" time="2015.09.19 12:37:10" />
+</voter>
+<voter name="Яхнов Кириак" birthDay="1960.10.14">
+	<visit station="2" time="2015.09.19 17:29:53" />
+</voter>
+<voter name="Белозерский Дин" birthDay="1922.11.20">
+	<visit station="29" time="2015.09.21 21:55:12" />
+</voter>
+<voter name="Васляев Прокофий" birthDay="1981.06.01">
+	<visit station="167" time="2015.09.21 23:01:47" />
+</voter>
+<voter name="Боровитинов Амвросий" birthDay="1990.02.22">
+	<visit station="172" time="2015.09.21 23:22:11" />
+</voter>
+<voter name="Ведихов Дидим" birthDay="1931.08.30">
+	<visit station="51" time="2015.09.19 16:12:11" />
+</voter>
+<voter name="Крысанов Август" birthDay="1986.02.13">
+	<visit station="9" time="2015.09.21 19:26:18" />
+</voter>
+<voter name="Бартенев Ринат" birthDay="1929.02.10">
+	<visit station="38" time="2015.09.17 21:18:47" />
+</voter>
+<voter name="Данченко Диоген" birthDay="1985.05.19">
+	<visit station="77" time="2015.09.21 22:43:34" />
+</voter>
+<voter name="Лепешкин Октавий" birthDay="1996.08.26">
+	<visit station="170" time="2015.09.17 17:20:15" />
+</voter>
+<voter name="Краснощеких Пётр" birthDay="1929.04.02">
+	<visit station="41" time="2015.09.17 22:52:44" />
+</voter>
+<voter name="Елин Виндей" birthDay="1935.09.16">
+	<visit station="27" time="2015.09.17 21:31:46" />
+</voter>
+<voter name="Вахно Дин" birthDay="1981.03.29">
+	<visit station="117" time="2015.09.21 17:25:54" />
+</voter>
+<voter name="Грибан Герольд" birthDay="1971.09.27">
+	<visit station="85" time="2015.09.17 21:30:11" />
+</voter>
+<voter name="Жмейда Андреян" birthDay="1969.02.12">
+	<visit station="97" time="2015.09.19 11:20:06" />
+</voter>
+<voter name="Кобяков Агафон" birthDay="1987.02.02">
+	<visit station="56" time="2015.09.19 13:34:43" />
+</voter>
+<voter name="Маслаков Гордий" birthDay="1969.11.02">
+	<visit station="86" time="2015.09.19 10:23:42" />
+</voter>
+<voter name="Бандурин Наиль" birthDay="1975.09.03">
+	<visit station="174" time="2015.09.19 15:47:43" />
+</voter>
+<voter name="Непьянов Октавий" birthDay="1937.03.01">
+	<visit station="82" time="2015.09.17 13:05:48" />
+</voter>
+<voter name="Бутков Витал" birthDay="1928.05.13">
+	<visit station="98" time="2015.09.19 22:13:25" />
+</voter>
+<voter name="Бабичев Грант" birthDay="1990.05.12">
+	<visit station="170" time="2015.09.21 21:33:37" />
+</voter>
+<voter name="Данов Ян" birthDay="1950.10.11">
+	<visit station="161" time="2015.09.21 19:14:23" />
+</voter>
+<voter name="Устиников Артём" birthDay="1942.03.29">
+	<visit station="66" time="2015.09.17 17:53:32" />
+</voter>
+<voter name="Верховской Ефимий" birthDay="1935.12.14">
+	<visit station="140" time="2015.09.19 16:45:49" />
+</voter>
+<voter name="Павлушкин Денис" birthDay="1941.04.10">
+	<visit station="114" time="2015.09.19 12:15:20" />
+</voter>
+<voter name="Веневцев Клим" birthDay="1973.11.23">
+	<visit station="132" time="2015.09.19 12:53:04" />
+</voter>
+<voter name="Курослепов Милен" birthDay="1930.02.15">
+	<visit station="78" time="2015.09.17 20:58:28" />
+</voter>
+<voter name="Федотьев Феликс" birthDay="1954.03.08">
+	<visit station="22" time="2015.09.21 20:05:54" />
+</voter>
+<voter name="Овсяников Ксенофонт" birthDay="1954.01.14">
+	<visit station="6" time="2015.09.19 19:07:18" />
+</voter>
+<voter name="Иващенков Владилен" birthDay="1968.05.01">
+	<visit station="89" time="2015.09.19 22:20:55" />
+</voter>
+<voter name="Кочмаров Влас" birthDay="1963.10.21">
+	<visit station="79" time="2015.09.19 14:38:11" />
+</voter>
+<voter name="Нестеренко Ливерий" birthDay="1967.12.05">
+	<visit station="27" time="2015.09.17 16:56:17" />
+</voter>
+<voter name="Кравцов Парамон" birthDay="1933.02.27">
+	<visit station="148" time="2015.09.17 19:46:49" />
+</voter>
+<voter name="Марфенькин Океан" birthDay="1957.12.27">
+	<visit station="132" time="2015.09.21 17:35:00" />
+</voter>
+<voter name="Небогатый Зевин" birthDay="1947.09.06">
+	<visit station="142" time="2015.09.19 17:19:59" />
+</voter>
+<voter name="Марущак Иоасаф" birthDay="1936.11.29">
+	<visit station="55" time="2015.09.19 17:48:02" />
+</voter>
+<voter name="Ярмишко Свет" birthDay="1987.09.12">
+	<visit station="7" time="2015.09.17 16:16:22" />
+</voter>
+<voter name="Райков Савин" birthDay="1972.04.07">
+	<visit station="86" time="2015.09.17 17:41:23" />
+</voter>
+<voter name="Шаламов Иустин" birthDay="1923.01.22">
+	<visit station="110" time="2015.09.21 16:54:43" />
+</voter>
+<voter name="Клетников Далмат" birthDay="1922.10.06">
+	<visit station="62" time="2015.09.19 20:34:11" />
+</voter>
+<voter name="Тараканов Новомир" birthDay="1930.05.20">
+	<visit station="47" time="2015.09.21 20:47:34" />
+</voter>
+<voter name="Побегайло Геодар" birthDay="1921.10.23">
+	<visit station="36" time="2015.09.19 14:47:57" />
+</voter>
+<voter name="Веденисов Логин" birthDay="1922.09.10">
+	<visit station="107" time="2015.09.21 16:36:00" />
+</voter>
+<voter name="Усс Елизбар" birthDay="1976.03.08">
+	<visit station="14" time="2015.09.17 15:38:02" />
+</voter>
+<voter name="Плахотник Галий" birthDay="1947.09.01">
+	<visit station="130" time="2015.09.21 18:26:54" />
+</voter>
+<voter name="Друнин Юлий" birthDay="1969.04.21">
+	<visit station="125" time="2015.09.17 20:11:46" />
+</voter>
+<voter name="Троицкий Геласий" birthDay="1959.12.14">
+	<visit station="176" time="2015.09.19 21:21:06" />
+</voter>
+<voter name="Вовкогонов Аскольд" birthDay="1970.01.07">
+	<visit station="76" time="2015.09.21 16:43:41" />
+</voter>
+<voter name="Портнягин Липат" birthDay="1946.09.17">
+	<visit station="85" time="2015.09.19 19:56:13" />
+</voter>
+<voter name="Маврыкин Рим" birthDay="1957.01.29">
+	<visit station="64" time="2015.09.19 13:47:15" />
+</voter>
+<voter name="Хонякин Макар" birthDay="1936.07.07">
+	<visit station="160" time="2015.09.17 15:17:23" />
+</voter>
+<voter name="Любушин Олав" birthDay="1986.10.28">
+	<visit station="20" time="2015.09.19 17:04:47" />
+</voter>
+<voter name="Кочановский Лель" birthDay="1973.11.07">
+	<visit station="22" time="2015.09.19 13:36:19" />
+</voter>
+<voter name="Твердилов Еразм" birthDay="1976.04.13">
+	<visit station="154" time="2015.09.21 22:14:53" />
+</voter>
+<voter name="Акимчев Африкан" birthDay="1946.05.10">
+	<visit station="73" time="2015.09.19 15:55:54" />
+</voter>
+<voter name="Синюков Гликерий" birthDay="1932.05.13">
+	<visit station="4" time="2015.09.21 19:17:42" />
+</voter>
+<voter name="Валерианов Изосим" birthDay="1922.01.27">
+	<visit station="83" time="2015.09.21 19:18:50" />
+</voter>
+<voter name="Лейкин Миронег" birthDay="1953.07.08">
+	<visit station="23" time="2015.09.19 14:54:07" />
+</voter>
+<voter name="Пащенко Эмилиан" birthDay="1923.03.18">
+	<visit station="44" time="2015.09.17 16:18:01" />
+</voter>
+<voter name="Озиридов Альгис" birthDay="1937.12.06">
+	<visit station="79" time="2015.09.17 15:13:27" />
+</voter>
+<voter name="Дорожкин Аристид" birthDay="1966.10.29">
+	<visit station="159" time="2015.09.17 16:36:02" />
+</voter>
+<voter name="Незус Армений" birthDay="1958.03.25">
+	<visit station="120" time="2015.09.19 11:24:27" />
+</voter>
+<voter name="Снежко Андрон" birthDay="1929.06.20">
+	<visit station="50" time="2015.09.19 16:09:24" />
+</voter>
+<voter name="Макогонов Малей" birthDay="1935.07.26">
+	<visit station="23" time="2015.09.19 19:47:15" />
+</voter>
+<voter name="Кириченко Богдан" birthDay="1953.12.06">
+	<visit station="150" time="2015.09.19 17:52:08" />
+</voter>
+<voter name="Кадимов Герт" birthDay="1957.02.14">
+	<visit station="46" time="2015.09.19 22:19:26" />
+</voter>
+<voter name="Лопухов Дмитрий" birthDay="1960.02.18">
+	<visit station="43" time="2015.09.21 20:18:13" />
+</voter>
+<voter name="Ерошев Лермонт" birthDay="1986.03.04">
+	<visit station="47" time="2015.09.17 22:16:00" />
+</voter>
+<voter name="Подхалюзин Захар" birthDay="1991.11.11">
+	<visit station="98" time="2015.09.21 18:35:16" />
+</voter>
+<voter name="Павлюков Адольф" birthDay="1941.04.19">
+	<visit station="13" time="2015.09.17 18:25:03" />
+</voter>
+<voter name="Шнейдерман Кодрат" birthDay="1979.01.24">
+	<visit station="107" time="2015.09.19 20:28:30" />
+</voter>
+<voter name="Ходарев Варлаам" birthDay="1988.09.24">
+	<visit station="165" time="2015.09.17 22:59:05" />
+</voter>
+<voter name="Яффе Зорий" birthDay="1927.08.10">
+	<visit station="36" time="2015.09.21 18:46:21" />
+</voter>
+<voter name="Краснов Ефрем" birthDay="1993.01.20">
+	<visit station="52" time="2015.09.17 19:27:50" />
+</voter>
+<voter name="Ломаш Радамес" birthDay="1982.10.11">
+	<visit station="49" time="2015.09.17 19:14:19" />
+</voter>
+<voter name="Король Игнат" birthDay="1971.07.03">
+	<visit station="151" time="2015.09.21 19:48:32" />
+</voter>
+<voter name="Черемных Каллистрат" birthDay="1988.09.30">
+	<visit station="159" time="2015.09.19 14:02:31" />
+</voter>
+<voter name="Палашов Денис" birthDay="1967.01.09">
+	<visit station="20" time="2015.09.17 20:51:27" />
+</voter>
+<voter name="Нехлюдов Дометий" birthDay="1986.09.01">
+	<visit station="151" time="2015.09.19 15:55:15" />
+</voter>
+<voter name="Варлашкин Емилий" birthDay="1982.06.12">
+	<visit station="140" time="2015.09.19 16:16:37" />
+</voter>
+<voter name="Узкий Мирослав" birthDay="1948.08.28">
+	<visit station="41" time="2015.09.19 15:18:09" />
+</voter>
+<voter name="Акинишин Альгис" birthDay="1956.08.30">
+	<visit station="4" time="2015.09.17 14:34:25" />
+</voter>
+<voter name="Паняшкин Ангий" birthDay="1945.05.03">
+	<visit station="20" time="2015.09.17 18:14:53" />
+</voter>
+<voter name="Романченко Селевкий" birthDay="1927.04.14">
+	<visit station="127" time="2015.09.19 13:58:25" />
+</voter>
+<voter name="Девятых Аристарх" birthDay="1968.04.27">
+	<visit station="26" time="2015.09.21 19:57:54" />
+</voter>
+<voter name="Полещук Геннадий" birthDay="1959.12.08">
+	<visit station="30" time="2015.09.17 15:17:49" />
+</voter>
+<voter name="Догоног Товий" birthDay="1983.11.23">
+	<visit station="34" time="2015.09.21 18:09:04" />
+</voter>
+<voter name="Просвирин Марлен" birthDay="1988.07.10">
+	<visit station="138" time="2015.09.21 19:20:52" />
+</voter>
+<voter name="Самойлик Элизбар" birthDay="1985.03.21">
+	<visit station="31" time="2015.09.19 13:50:03" />
+</voter>
+<voter name="Братухин Нариман" birthDay="1963.09.24">
+	<visit station="46" time="2015.09.19 13:01:00" />
+</voter>
+<voter name="Жабко Ферапонт" birthDay="1921.10.24">
+	<visit station="6" time="2015.09.21 18:28:55" />
+</voter>
+<voter name="Половцев Вассиан" birthDay="1952.03.25">
+	<visit station="102" time="2015.09.17 20:57:33" />
+</voter>
+<voter name="Чалеев Казимир" birthDay="1963.06.18">
+	<visit station="144" time="2015.09.21 21:50:44" />
+</voter>
+<voter name="Ланщиков Ахиллий" birthDay="1986.08.14">
+	<visit station="102" time="2015.09.21 18:39:07" />
+</voter>
+<voter name="Воинский Гелиан" birthDay="1943.07.08">
+	<visit station="10" time="2015.09.21 17:42:22" />
+</voter>
+<voter name="Васьянов Эйнар" birthDay="1991.07.18">
+	<visit station="28" time="2015.09.19 19:44:37" />
+</voter>
+<voter name="Сверчевский Иринарх" birthDay="1930.02.25">
+	<visit station="128" time="2015.09.19 19:00:57" />
+</voter>
+<voter name="Сицкий Назарий" birthDay="1946.12.19">
+	<visit station="12" time="2015.09.21 17:27:41" />
+</voter>
+<voter name="Хорошихин Ким" birthDay="1971.01.14">
+	<visit station="103" time="2015.09.17 13:14:57" />
+</voter>
+<voter name="Самарский Милий" birthDay="1975.05.10">
+	<visit station="107" time="2015.09.19 11:08:51" />
+</voter>
+<voter name="Упин Елима" birthDay="1949.04.15">
+	<visit station="21" time="2015.09.19 19:33:45" />
+</voter>
+<voter name="Преснухин Ярополк" birthDay="1934.10.18">
+	<visit station="138" time="2015.09.19 10:18:40" />
+</voter>
+<voter name="Протасов Самойло" birthDay="1978.05.04">
+	<visit station="22" time="2015.09.19 15:20:16" />
+</voter>
+<voter name="Косолобов Святополк" birthDay="1979.05.19">
+	<visit station="129" time="2015.09.17 14:56:40" />
+</voter>
+<voter name="Варфоламеев Родон" birthDay="1920.11.06">
+	<visit station="86" time="2015.09.17 14:33:01" />
+</voter>
+<voter name="Муратов Станислав" birthDay="1933.04.30">
+	<visit station="145" time="2015.09.19 13:38:05" />
+</voter>
+<voter name="Ковальков Май" birthDay="1994.11.01">
+	<visit station="21" time="2015.09.21 21:59:09" />
+</voter>
+<voter name="Танасьев Ян" birthDay="1964.04.13">
+	<visit station="17" time="2015.09.19 19:08:31" />
+</voter>
+<voter name="Панченко Баграт" birthDay="1966.07.01">
+	<visit station="113" time="2015.09.21 17:31:52" />
+</voter>
+<voter name="Кротов Родон" birthDay="1979.05.13">
+	<visit station="125" time="2015.09.21 19:26:00" />
+</voter>
+<voter name="Ишин Севериан" birthDay="1940.01.14">
+	<visit station="27" time="2015.09.19 14:37:19" />
+</voter>
+<voter name="Сковородник Януар" birthDay="1947.12.30">
+	<visit station="4" time="2015.09.21 18:39:45" />
+</voter>
+<voter name="Гробожилов Сабир" birthDay="1923.08.30">
+	<visit station="94" time="2015.09.19 10:57:57" />
+</voter>
+<voter name="Зацепин Есений" birthDay="1982.06.29">
+	<visit station="121" time="2015.09.19 17:57:32" />
+</voter>
+<voter name="Облонский Геральд" birthDay="1992.04.25">
+	<visit station="168" time="2015.09.21 21:10:40" />
+</voter>
+<voter name="Трухин Велислав" birthDay="1987.04.24">
+	<visit station="113" time="2015.09.21 17:43:19" />
+</voter>
+<voter name="Шунин Арам" birthDay="1928.04.06">
+	<visit station="71" time="2015.09.19 11:16:59" />
+</voter>
+<voter name="Анучин Вильгельм" birthDay="1975.02.04">
+	<visit station="158" time="2015.09.19 14:31:16" />
+</voter>
+<voter name="Поваляев Ролан" birthDay="1990.02.12">
+	<visit station="71" time="2015.09.19 10:19:20" />
+</voter>
+<voter name="Геранькин Арсений" birthDay="1936.02.14">
+	<visit station="148" time="2015.09.21 22:44:10" />
+</voter>
+<voter name="Новосильцев Памфил" birthDay="1928.01.10">
+	<visit station="117" time="2015.09.19 13:51:15" />
+</voter>
+<voter name="Чеборахин Люциан" birthDay="1945.08.01">
+	<visit station="84" time="2015.09.17 15:28:09" />
+</voter>
+<voter name="Воронков Елевсипп" birthDay="1973.05.18">
+	<visit station="66" time="2015.09.19 21:34:12" />
+</voter>
+<voter name="Просоедов Кирьяк" birthDay="1945.04.14">
+	<visit station="29" time="2015.09.21 18:09:25" />
+</voter>
+<voter name="Кошкодамов Ветран" birthDay="1924.05.16">
+	<visit station="111" time="2015.09.19 12:36:17" />
+</voter>
+<voter name="Туров Августин" birthDay="1954.07.19">
+	<visit station="90" time="2015.09.21 17:41:45" />
+</voter>
+<voter name="Серпухов Аникей" birthDay="1947.01.04">
+	<visit station="62" time="2015.09.21 17:14:27" />
+</voter>
+<voter name="Кривобоков Трофим" birthDay="1992.11.30">
+	<visit station="51" time="2015.09.19 20:15:43" />
+</voter>
+<voter name="Греховодов Лениан" birthDay="1950.07.11">
+	<visit station="86" time="2015.09.17 19:52:43" />
+</voter>
+<voter name="Нехорошков Геральд" birthDay="1995.08.13">
+	<visit station="164" time="2015.09.21 22:00:03" />
+</voter>
+<voter name="Данильчик Георгий" birthDay="1973.01.18">
+	<visit station="37" time="2015.09.17 13:05:19" />
+</voter>
+<voter name="Левухин Фред" birthDay="1968.03.10">
+	<visit station="136" time="2015.09.17 20:07:53" />
+</voter>
+<voter name="Береговой Виктор" birthDay="1923.04.14">
+	<visit station="159" time="2015.09.17 20:01:22" />
+</voter>
+<voter name="Тарабрин Иллирик" birthDay="1986.10.24">
+	<visit station="82" time="2015.09.21 19:22:59" />
+</voter>
+<voter name="Жаков Спиридон" birthDay="1947.09.15">
+	<visit station="13" time="2015.09.17 15:00:17" />
+</voter>
+<voter name="Набойщиков Аникей" birthDay="1923.09.16">
+	<visit station="131" time="2015.09.21 17:15:38" />
+</voter>
+<voter name="Марьюшкин Сервил" birthDay="1995.11.09">
+	<visit station="69" time="2015.09.17 16:49:30" />
+</voter>
+<voter name="Травкин Ардалион" birthDay="1963.01.26">
+	<visit station="124" time="2015.09.21 21:17:17" />
+</voter>
+<voter name="Буйнов Виктор" birthDay="1932.02.24">
+	<visit station="108" time="2015.09.21 22:56:18" />
+</voter>
+<voter name="Ткачук Витольд" birthDay="1939.12.09">
+	<visit station="167" time="2015.09.17 21:44:25" />
+</voter>
+<voter name="Инцертов Северин" birthDay="1956.04.30">
+	<visit station="53" time="2015.09.19 19:46:51" />
+</voter>
+<voter name="Слепов Кронид" birthDay="1991.02.01">
+	<visit station="15" time="2015.09.17 20:00:27" />
+</voter>
+<voter name="Тимирев Публий" birthDay="1957.05.16">
+	<visit station="98" time="2015.09.17 19:53:52" />
+</voter>
+<voter name="Орданский Гораций" birthDay="1992.04.13">
+	<visit station="10" time="2015.09.19 15:10:59" />
+</voter>
+<voter name="Атрохов Венедикт" birthDay="1986.07.15">
+	<visit station="173" time="2015.09.21 18:52:49" />
+</voter>
+<voter name="Ледяев Ефимий" birthDay="1935.04.29">
+	<visit station="172" time="2015.09.19 19:10:48" />
+</voter>
+<voter name="Шмонин Мокей" birthDay="1924.08.06">
+	<visit station="172" time="2015.09.19 19:26:13" />
+</voter>
+<voter name="Рявкин Крискент" birthDay="1957.10.01">
+	<visit station="120" time="2015.09.19 20:48:53" />
+</voter>
+<voter name="Фиохин Остап" birthDay="1955.04.12">
+	<visit station="17" time="2015.09.21 22:48:57" />
+</voter>
+<voter name="Тонкошкуров Гермий" birthDay="1963.08.26">
+	<visit station="34" time="2015.09.19 10:56:19" />
+</voter>
+<voter name="Чеснов Аврамий" birthDay="1931.01.27">
+	<visit station="101" time="2015.09.17 14:37:08" />
+</voter>
+<voter name="Файвель Мартьян" birthDay="1989.12.26">
+	<visit station="10" time="2015.09.19 16:22:06" />
+</voter>
+<voter name="Резвушин Фот" birthDay="1924.04.21">
+	<visit station="103" time="2015.09.19 13:50:31" />
+</voter>
+<voter name="Ветчинкин Юджин" birthDay="1960.02.29">
+	<visit station="28" time="2015.09.19 14:02:20" />
+</voter>
+<voter name="Ярушков Неон" birthDay="1994.05.18">
+	<visit station="107" time="2015.09.19 20:21:37" />
+</voter>
+<voter name="Чернышков Галактион" birthDay="1996.06.16">
+	<visit station="128" time="2015.09.17 17:01:01" />
+</voter>
+<voter name="Падерин Венедей" birthDay="1979.08.23">
+	<visit station="112" time="2015.09.17 16:38:32" />
+</voter>
+<voter name="Таланкин Анемподист" birthDay="1936.10.27">
+	<visit station="73" time="2015.09.21 19:25:52" />
+</voter>
+<voter name="Тушин Давыд" birthDay="1977.06.13">
+	<visit station="31" time="2015.09.19 15:41:10" />
+</voter>
+<voter name="Лотырев Карим" birthDay="1975.10.01">
+	<visit station="43" time="2015.09.21 22:58:07" />
+</voter>
+<voter name="Воинский Веденей" birthDay="1947.03.02">
+	<visit station="171" time="2015.09.17 20:41:54" />
+</voter>
+<voter name="Мурашкинцев Ладислав" birthDay="1959.05.13">
+	<visit station="43" time="2015.09.21 23:23:21" />
+</voter>
+<voter name="Тверитинов Елевсипп" birthDay="1966.07.22">
+	<visit station="49" time="2015.09.17 19:08:02" />
+</voter>
+<voter name="Оришкин Мартин" birthDay="1927.01.25">
+	<visit station="113" time="2015.09.19 20:32:55" />
+</voter>
+<voter name="Тетеревков Демьян" birthDay="1966.04.28">
+	<visit station="128" time="2015.09.17 15:47:11" />
+</voter>
+<voter name="Ефременко Рандольф" birthDay="1935.04.12">
+	<visit station="23" time="2015.09.19 16:11:56" />
+</voter>
+<voter name="Лимарев Север" birthDay="1971.01.06">
+	<visit station="148" time="2015.09.19 21:50:35" />
+</voter>
+<voter name="Штыров Милен" birthDay="1981.05.29">
+	<visit station="174" time="2015.09.17 21:50:14" />
+</voter>
+<voter name="Юдасов Гаррий" birthDay="1965.05.13">
+	<visit station="37" time="2015.09.17 13:23:32" />
+</voter>
+<voter name="Кушелев Вильям" birthDay="1972.10.27">
+	<visit station="125" time="2015.09.21 23:14:36" />
+</voter>
+<voter name="Холзин Конрад" birthDay="1925.05.02">
+	<visit station="135" time="2015.09.17 18:52:37" />
+</voter>
+<voter name="Могутнов Пахомий" birthDay="1976.05.09">
+	<visit station="135" time="2015.09.19 11:52:12" />
+</voter>
+<voter name="Трифилов Фрол" birthDay="1931.03.07">
+	<visit station="150" time="2015.09.21 21:43:37" />
+</voter>
+<voter name="Шишканов Дионисий" birthDay="1982.07.20">
+	<visit station="98" time="2015.09.21 19:34:06" />
+</voter>
+<voter name="Лутовин Аксён" birthDay="1933.12.04">
+	<visit station="98" time="2015.09.17 21:25:24" />
+</voter>
+<voter name="Яковенко Вилорий" birthDay="1938.01.06">
+	<visit station="171" time="2015.09.19 20:46:57" />
+</voter>
+<voter name="Павлюхин Иоиль" birthDay="1970.03.06">
+	<visit station="94" time="2015.09.17 14:55:28" />
+</voter>
+<voter name="Пахмутов Димитриан" birthDay="1945.07.03">
+	<visit station="3" time="2015.09.21 16:51:31" />
+</voter>
+<voter name="Шатнев Лазарь" birthDay="1984.05.29">
+	<visit station="7" time="2015.09.19 20:44:59" />
+</voter>
+<voter name="Патрикевич Аксён" birthDay="1955.08.08">
+	<visit station="15" time="2015.09.17 14:04:05" />
+</voter>
+<voter name="Потапенко Евстафий" birthDay="1948.05.15">
+	<visit station="106" time="2015.09.21 21:43:17" />
+</voter>
+<voter name="Могильный Нариман" birthDay="1920.09.23">
+	<visit station="83" time="2015.09.17 14:47:42" />
+</voter>
+<voter name="Шуринов Сократ" birthDay="1976.11.02">
+	<visit station="157" time="2015.09.19 14:09:28" />
+</voter>
+<voter name="Сергунков Никифор" birthDay="1938.10.27">
+	<visit station="76" time="2015.09.21 21:27:52" />
+</voter>
+<voter name="Неупокоин Николай" birthDay="1964.07.05">
+	<visit station="77" time="2015.09.21 18:58:13" />
+</voter>
+<voter name="Майко Герт" birthDay="1989.03.28">
+	<visit station="67" time="2015.09.21 17:22:46" />
+</voter>
+<voter name="Лутошкин Самуил" birthDay="1926.08.14">
+	<visit station="176" time="2015.09.17 16:56:46" />
+</voter>
+<voter name="Генулин Феоген" birthDay="1934.07.23">
+	<visit station="106" time="2015.09.17 17:03:05" />
+</voter>
+<voter name="Баланов Евлогий" birthDay="1948.03.13">
+	<visit station="77" time="2015.09.17 17:57:43" />
+</voter>
+<voter name="Непийвода Епифаний" birthDay="1985.02.02">
+	<visit station="174" time="2015.09.19 10:10:17" />
+</voter>
+<voter name="Максимишин Северин" birthDay="1921.09.21">
+	<visit station="75" time="2015.09.21 20:55:10" />
+</voter>
+<voter name="Лихачев Милен" birthDay="1969.01.20">
+	<visit station="88" time="2015.09.21 15:58:22" />
+</voter>
+<voter name="Ветров Филофей" birthDay="1952.03.07">
+	<visit station="80" time="2015.09.21 18:38:25" />
+</voter>
+<voter name="Афонасьев Анект" birthDay="1983.10.28">
+	<visit station="147" time="2015.09.21 15:56:20" />
+</voter>
+<voter name="Ядрышев Евтропий" birthDay="1927.08.08">
+	<visit station="56" time="2015.09.17 13:03:40" />
+</voter>
+<voter name="Неронов Сабир" birthDay="1954.06.28">
+	<visit station="114" time="2015.09.21 18:20:22" />
+</voter>
+<voter name="Корнаков Флорентий" birthDay="1934.07.31">
+	<visit station="108" time="2015.09.19 20:58:14" />
+</voter>
+<voter name="Язвецов Ермил" birthDay="1925.07.23">
+	<visit station="24" time="2015.09.19 17:55:30" />
+</voter>
+<voter name="Неретин Зиновий" birthDay="1985.07.24">
+	<visit station="30" time="2015.09.21 19:13:08" />
+</voter>
+<voter name="Юсов Венедей" birthDay="1952.06.07">
+	<visit station="112" time="2015.09.21 18:44:30" />
+</voter>
+<voter name="Федерякин Фома" birthDay="1978.05.06">
+	<visit station="86" time="2015.09.19 19:44:11" />
+</voter>
+<voter name="Соленов Астерий" birthDay="1951.12.02">
+	<visit station="28" time="2015.09.21 17:03:23" />
+</voter>
+<voter name="Худяков Дионис" birthDay="1964.07.21">
+	<visit station="68" time="2015.09.17 18:13:36" />
+</voter>
+<voter name="Филюнин Гаян" birthDay="1949.02.18">
+	<visit station="81" time="2015.09.17 16:07:31" />
+</voter>
+<voter name="Манюрин Ион" birthDay="1928.09.04">
+	<visit station="144" time="2015.09.17 16:48:05" />
+</voter>
+<voter name="Фалаев Тимон" birthDay="1974.04.22">
+	<visit station="53" time="2015.09.19 13:48:06" />
+</voter>
+<voter name="Гиляров Меней" birthDay="1981.02.21">
+	<visit station="10" time="2015.09.21 20:12:50" />
+</voter>
+<voter name="Ергаков Изот" birthDay="1978.10.26">
+	<visit station="26" time="2015.09.17 15:08:43" />
+</voter>
+<voter name="Смоленский Ной" birthDay="1923.08.30">
+	<visit station="53" time="2015.09.17 22:52:24" />
+</voter>
+<voter name="Осьмеркин Наль" birthDay="1956.03.16">
+	<visit station="49" time="2015.09.17 22:48:45" />
+</voter>
+<voter name="Пархомчук Потамий" birthDay="1936.05.25">
+	<visit station="20" time="2015.09.19 19:38:44" />
+</voter>
+<voter name="Среднев Твердислав" birthDay="1979.06.29">
+	<visit station="143" time="2015.09.19 11:30:02" />
+</voter>
+<voter name="Зеленский Ипат" birthDay="1969.03.19">
+	<visit station="170" time="2015.09.19 20:39:37" />
+</voter>
+<voter name="Товстоногов Максимильян" birthDay="1944.02.24">
+	<visit station="115" time="2015.09.21 20:09:38" />
+</voter>
+<voter name="Барятинский Аввакум" birthDay="1921.02.14">
+	<visit station="51" time="2015.09.21 21:15:43" />
+</voter>
+<voter name="Тюнькин Никола" birthDay="1978.06.22">
+	<visit station="31" time="2015.09.21 17:36:01" />
+</voter>
+<voter name="Акишев Бертольд" birthDay="1933.07.23">
+	<visit station="158" time="2015.09.19 16:05:53" />
+</voter>
+<voter name="Коханов Троадий" birthDay="1987.02.11">
+	<visit station="132" time="2015.09.21 17:31:42" />
+</voter>
+<voter name="Жеравкин Клементин" birthDay="1990.03.17">
+	<visit station="4" time="2015.09.17 15:53:24" />
+</voter>
+<voter name="Добрый Симеон" birthDay="1980.04.10">
+	<visit station="51" time="2015.09.17 14:11:10" />
+</voter>
+<voter name="Залыгин Амвросий" birthDay="1978.06.04">
+	<visit station="14" time="2015.09.21 19:12:44" />
+</voter>
+<voter name="Любахин Артур" birthDay="1950.03.18">
+	<visit station="12" time="2015.09.17 15:17:07" />
+</voter>
+<voter name="Федосеев Самсон" birthDay="1984.01.09">
+	<visit station="80" time="2015.09.19 13:38:18" />
+</voter>
+<voter name="Сипачев Амос" birthDay="1982.08.20">
+	<visit station="94" time="2015.09.21 20:33:23" />
+</voter>
+<voter name="Белокринкин Хрисанф" birthDay="1987.01.30">
+	<visit station="108" time="2015.09.21 16:15:27" />
+</voter>
+<voter name="Якимец Варлен" birthDay="1942.04.07">
+	<visit station="136" time="2015.09.19 10:12:39" />
+</voter>
+<voter name="Герасютин Козьма" birthDay="1949.09.24">
+	<visit station="32" time="2015.09.21 22:44:38" />
+</voter>
+<voter name="Семиков Иов" birthDay="1935.07.16">
+	<visit station="13" time="2015.09.17 18:26:06" />
+</voter>
+<voter name="Ванявин Абрам" birthDay="1940.02.27">
+	<visit station="65" time="2015.09.17 21:57:22" />
+</voter>
+<voter name="Гриньков Артемий" birthDay="1928.06.27">
+	<visit station="114" time="2015.09.17 20:18:34" />
+</voter>
+<voter name="Заварзин Дар" birthDay="1984.04.18">
+	<visit station="91" time="2015.09.17 15:49:45" />
+</voter>
+<voter name="Чернооков Изот" birthDay="1965.04.30">
+	<visit station="69" time="2015.09.19 10:41:36" />
+</voter>
+<voter name="Цируль Клементин" birthDay="1989.02.15">
+	<visit station="74" time="2015.09.21 19:07:10" />
+</voter>
+<voter name="Ющев Гурий" birthDay="1972.09.13">
+	<visit station="175" time="2015.09.21 19:30:42" />
+</voter>
+<voter name="Ляпунов Мокей" birthDay="1930.03.28">
+	<visit station="102" time="2015.09.19 17:38:40" />
+</voter>
+<voter name="Хорунжий Артур" birthDay="1951.10.25">
+	<visit station="137" time="2015.09.21 18:22:38" />
+</voter>
+<voter name="Никишов Лонгин" birthDay="1928.07.05">
+	<visit station="104" time="2015.09.21 17:38:41" />
+</voter>
+<voter name="Умов Еспер" birthDay="1936.06.17">
+	<visit station="4" time="2015.09.17 13:48:59" />
+</voter>
+<voter name="Юпин Иеремия" birthDay="1976.09.15">
+	<visit station="19" time="2015.09.17 16:20:10" />
+</voter>
+<voter name="Романчев Андриан" birthDay="1981.02.07">
+	<visit station="144" time="2015.09.21 22:04:00" />
+</voter>
+<voter name="Марфин Любомир" birthDay="1934.01.19">
+	<visit station="95" time="2015.09.17 16:17:25" />
+</voter>
+<voter name="Юберов Храбр" birthDay="1944.05.19">
+	<visit station="96" time="2015.09.21 18:26:54" />
+</voter>
+<voter name="Гречнев Кондратий" birthDay="1992.01.30">
+	<visit station="41" time="2015.09.21 18:19:45" />
+</voter>
+<voter name="Филомафитский Памфил" birthDay="1948.04.05">
+	<visit station="153" time="2015.09.17 21:27:51" />
+</voter>
+<voter name="Лутохин Довмонт" birthDay="1931.01.27">
+	<visit station="128" time="2015.09.19 16:23:57" />
+</voter>
+<voter name="Нищев Емельян" birthDay="1993.12.24">
+	<visit station="140" time="2015.09.21 20:48:42" />
+</voter>
+<voter name="Четвериков Калина" birthDay="1934.03.21">
+	<visit station="136" time="2015.09.21 23:04:31" />
+</voter>
+<voter name="Ваньтяев Аггей" birthDay="1941.04.26">
+	<visit station="60" time="2015.09.17 19:44:56" />
+</voter>
+<voter name="Петросян Эрик" birthDay="1939.11.09">
+	<visit station="65" time="2015.09.17 18:33:50" />
+</voter>
+<voter name="Скрыпеев Артём" birthDay="1951.10.25">
+	<visit station="91" time="2015.09.21 15:59:29" />
+</voter>
+<voter name="Мошкин Парамон" birthDay="1950.12.23">
+	<visit station="10" time="2015.09.17 19:38:15" />
+</voter>
+<voter name="Губкин Тиль" birthDay="1939.05.04">
+	<visit station="169" time="2015.09.17 17:53:54" />
+</voter>
+<voter name="Савватеев Исидор" birthDay="1971.05.28">
+	<visit station="77" time="2015.09.19 11:51:58" />
+</voter>
+<voter name="Плющенко Яков" birthDay="1942.05.03">
+	<visit station="69" time="2015.09.21 18:31:13" />
+</voter>
+<voter name="Камшилов Татий" birthDay="1936.05.16">
+	<visit station="174" time="2015.09.19 20:23:04" />
+</voter>
+<voter name="Вислобоков Назим" birthDay="1936.12.12">
+	<visit station="70" time="2015.09.21 18:45:15" />
+</voter>
+<voter name="Лапшов Ларгий" birthDay="1971.07.05">
+	<visit station="105" time="2015.09.19 18:50:24" />
+</voter>
+<voter name="Серых Икар" birthDay="1975.05.21">
+	<visit station="115" time="2015.09.17 18:28:13" />
+</voter>
+<voter name="Жмурин Троадий" birthDay="1941.05.12">
+	<visit station="33" time="2015.09.21 17:42:06" />
+</voter>
+<voter name="Шумаркин Анвар" birthDay="1972.07.18">
+	<visit station="117" time="2015.09.17 22:54:47" />
+</voter>
+<voter name="Мыцыков Сильван" birthDay="1972.05.19">
+	<visit station="99" time="2015.09.17 20:00:54" />
+</voter>
+<voter name="Ленковский Иустин" birthDay="1973.05.18">
+	<visit station="57" time="2015.09.19 14:38:07" />
+</voter>
+<voter name="Харлашев Венедей" birthDay="1928.03.14">
+	<visit station="56" time="2015.09.19 18:00:39" />
+</voter>
+<voter name="Еленкин Вилорг" birthDay="1948.03.09">
+	<visit station="12" time="2015.09.17 13:27:40" />
+</voter>
+<voter name="Сахаров Альгис" birthDay="1941.06.28">
+	<visit station="109" time="2015.09.19 20:36:47" />
+</voter>
+<voter name="Смык Горазд" birthDay="1962.03.08">
+	<visit station="160" time="2015.09.21 23:03:19" />
+</voter>
+<voter name="Окладников Есип" birthDay="1952.04.22">
+	<visit station="70" time="2015.09.17 14:15:54" />
+</voter>
+<voter name="Ребров Дасий" birthDay="1962.06.12">
+	<visit station="166" time="2015.09.21 19:06:30" />
+</voter>
+<voter name="Куттыев Алан" birthDay="1980.12.12">
+	<visit station="159" time="2015.09.21 16:59:40" />
+</voter>
+<voter name="Крамов Гедеон" birthDay="1949.03.16">
+	<visit station="116" time="2015.09.21 15:30:56" />
+</voter>
+<voter name="Артюшков Степан" birthDay="1984.02.29">
+	<visit station="160" time="2015.09.21 20:45:51" />
+</voter>
+<voter name="Акимкин Булат" birthDay="1964.08.30">
+	<visit station="101" time="2015.09.17 21:35:31" />
+</voter>
+<voter name="Юршевич Садоф" birthDay="1967.06.26">
+	<visit station="161" time="2015.09.17 22:38:48" />
+</voter>
+<voter name="Колюбакин Артур" birthDay="1929.02.16">
+	<visit station="49" time="2015.09.19 19:49:30" />
+</voter>
+<voter name="Швалев Омар" birthDay="1975.10.26">
+	<visit station="151" time="2015.09.17 17:03:27" />
+</voter>
+<voter name="Рысин Иустин" birthDay="1990.09.24">
+	<visit station="21" time="2015.09.19 10:26:17" />
+</voter>
+<voter name="Самопрялин Мирослав" birthDay="1925.06.05">
+	<visit station="1" time="2015.09.21 18:53:15" />
+</voter>
+<voter name="Лобов Роберт" birthDay="1980.08.31">
+	<visit station="167" time="2015.09.19 21:14:34" />
+</voter>
+<voter name="Серегин Дионисий" birthDay="1943.12.14">
+	<visit station="165" time="2015.09.19 12:11:28" />
+</voter>
+<voter name="Калинников Оскар" birthDay="1936.04.11">
+	<visit station="86" time="2015.09.17 18:45:50" />
+</voter>
+<voter name="Тритяков Валерий" birthDay="1968.01.04">
+	<visit station="162" time="2015.09.21 22:31:53" />
+</voter>
+<voter name="Леванов Твердислав" birthDay="1938.04.17">
+	<visit station="1" time="2015.09.21 22:45:44" />
+</voter>
+<voter name="Головачев Ипполит" birthDay="1953.02.17">
+	<visit station="23" time="2015.09.21 19:48:18" />
+</voter>
+<voter name="Степычев Малей" birthDay="1960.11.24">
+	<visit station="21" time="2015.09.21 20:58:20" />
+</voter>
+<voter name="Васынев Лиодор" birthDay="1951.01.05">
+	<visit station="135" time="2015.09.21 16:19:18" />
+</voter>
+<voter name="Босый Алексей" birthDay="1960.01.22">
+	<visit station="63" time="2015.09.21 17:26:54" />
+</voter>
+<voter name="Мазур Михей" birthDay="1934.05.19">
+	<visit station="39" time="2015.09.21 20:29:22" />
+</voter>
+<voter name="Попок Эдуард" birthDay="1921.07.04">
+	<visit station="94" time="2015.09.21 19:46:39" />
+</voter>
+<voter name="Тарабычин Иов" birthDay="1960.07.02">
+	<visit station="84" time="2015.09.17 20:49:05" />
+</voter>
+<voter name="Писцов Радамес" birthDay="1968.04.16">
+	<visit station="174" time="2015.09.19 12:41:03" />
+</voter>
+<voter name="Киреевский Клементий" birthDay="1960.11.11">
+	<visit station="98" time="2015.09.17 15:41:07" />
+</voter>
+<voter name="Миклашевский Серапион" birthDay="1988.11.30">
+	<visit station="67" time="2015.09.21 20:53:08" />
+</voter>
+<voter name="Трундин Туллий" birthDay="1924.11.23">
+	<visit station="118" time="2015.09.21 22:16:33" />
+</voter>
+<voter name="Племянников Венедикт" birthDay="1936.08.11">
+	<visit station="65" time="2015.09.21 20:36:59" />
+</voter>
+<voter name="Баданин Панкрат" birthDay="1987.02.23">
+	<visit station="141" time="2015.09.19 18:54:21" />
+</voter>
+<voter name="Пронович Фред" birthDay="1969.02.18">
+	<visit station="83" time="2015.09.19 18:21:54" />
+</voter>
+<voter name="Герасов Аникий" birthDay="1972.02.10">
+	<visit station="6" time="2015.09.19 18:35:44" />
+</voter>
+<voter name="Беспрозванов Тигрий" birthDay="1956.10.19">
+	<visit station="171" time="2015.09.17 21:10:23" />
+</voter>
+<voter name="Логинов Адриан" birthDay="1938.06.28">
+	<visit station="160" time="2015.09.21 17:26:05" />
+</voter>
+<voter name="Таланин Исайя" birthDay="1993.04.15">
+	<visit station="100" time="2015.09.19 11:00:46" />
+</voter>
+<voter name="Лешин Лаэрт" birthDay="1968.04.05">
+	<visit station="93" time="2015.09.19 18:58:12" />
+</voter>
+<voter name="Супрун Геодар" birthDay="1996.03.28">
+	<visit station="69" time="2015.09.17 15:02:23" />
+</voter>
+<voter name="Шамардин Каллистрат" birthDay="1996.03.05">
+	<visit station="179" time="2015.09.17 14:07:30" />
+</voter>
+<voter name="Канский Генрих" birthDay="1984.03.28">
+	<visit station="73" time="2015.09.17 18:21:58" />
+</voter>
+<voter name="Киляков Путислав" birthDay="1961.07.03">
+	<visit station="5" time="2015.09.21 18:51:45" />
+</voter>
+<voter name="Терехов Захар" birthDay="1922.02.12">
+	<visit station="37" time="2015.09.19 13:33:47" />
+</voter>
+<voter name="Насруллаев Вилен" birthDay="1978.09.23">
+	<visit station="59" time="2015.09.19 19:09:57" />
+</voter>
+<voter name="Ваньков Лель" birthDay="1981.11.12">
+	<visit station="39" time="2015.09.17 17:45:35" />
+</voter>
+<voter name="Гиндин Эльмир" birthDay="1949.07.23">
+	<visit station="141" time="2015.09.17 21:52:20" />
+</voter>
+<voter name="Рюмшин Варлен" birthDay="1949.09.11">
+	<visit station="41" time="2015.09.19 19:11:08" />
+</voter>
+<voter name="Кадомцев Альберт" birthDay="1963.07.09">
+	<visit station="149" time="2015.09.21 19:10:22" />
+</voter>
+<voter name="Красухин Феофилакт" birthDay="1926.01.17">
+	<visit station="118" time="2015.09.21 21:56:16" />
+</voter>
+<voter name="Альбицкий Виктор" birthDay="1937.04.27">
+	<visit station="36" time="2015.09.21 23:12:42" />
+</voter>
+<voter name="Промптов Тимон" birthDay="1936.05.18">
+	<visit station="38" time="2015.09.17 13:08:12" />
+</voter>
+<voter name="Водолазский Новомир" birthDay="1979.12.10">
+	<visit station="15" time="2015.09.19 15:23:06" />
+</voter>
+<voter name="Серебряников Евсигний" birthDay="1923.12.05">
+	<visit station="140" time="2015.09.19 14:44:49" />
+</voter>
+<voter name="Ситников Потап" birthDay="1989.07.25">
+	<visit station="108" time="2015.09.19 15:31:16" />
+</voter>
+<voter name="Артемкин Севастьян" birthDay="1925.05.12">
+	<visit station="49" time="2015.09.19 11:05:16" />
+</voter>
+<voter name="Лукащук Кристоф" birthDay="1960.12.30">
+	<visit station="48" time="2015.09.21 21:07:06" />
+</voter>
+<voter name="Босый Апрелий" birthDay="1931.07.05">
+	<visit station="135" time="2015.09.17 21:54:52" />
+</voter>
+<voter name="Пап Степан" birthDay="1937.04.12">
+	<visit station="155" time="2015.09.21 17:39:31" />
+</voter>
+<voter name="Незовибатько Люксен" birthDay="1974.05.05">
+	<visit station="155" time="2015.09.17 22:31:01" />
+</voter>
+<voter name="Мордвин Ярополк" birthDay="1952.08.04">
+	<visit station="3" time="2015.09.17 17:13:33" />
+</voter>
+<voter name="Алимпиев Фофан" birthDay="1970.07.30">
+	<visit station="101" time="2015.09.19 13:56:31" />
+</voter>
+<voter name="Черемискин Эвальд" birthDay="1951.04.13">
+	<visit station="94" time="2015.09.19 16:34:42" />
+</voter>
+<voter name="Кондрушкин Виталий" birthDay="1967.11.13">
+	<visit station="120" time="2015.09.19 11:32:56" />
+</voter>
+</voters>
