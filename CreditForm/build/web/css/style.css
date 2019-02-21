@@ -1,0 +1,51 @@
+.input-group {
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 0;
+}
+
+.file-input {
+  display: none;
+}
+button {
+    margin-bottom:5px;
+    margin-top:5px;
+}
+
+h4 i {
+    color: grey;
+}
+
+html, body {
+    background:
+        -webkit-linear-gradient(45deg, hsla(289, 100%, 94%, 1) 0%, hsla(289, 100%, 94%, 0) 70%),
+        -webkit-linear-gradient(315deg, hsla(44, 96%, 97%, 1) 10%, hsla(44, 96%, 97%, 0) 80%),
+        -webkit-linear-gradient(225deg, hsla(251, 95%, 94%, 1) 10%, hsla(251, 95%, 94%, 0) 80%),
+        -webkit-linear-gradient(135deg, hsla(49, 98%, 64%, 1) 100%, hsla(49, 98%, 64%, 0) 70%);
+    background:
+        linear-gradient(45deg, hsla(289, 100%, 94%, 1) 0%, hsla(289, 100%, 94%, 0) 70%),
+        linear-gradient(135deg, hsla(44, 96%, 97%, 1) 10%, hsla(44, 96%, 97%, 0) 80%),
+        linear-gradient(225deg, hsla(251, 95%, 94%, 1) 10%, hsla(251, 95%, 94%, 0) 80%),
+        linear-gradient(315deg, hsla(49, 98%, 64%, 1) 100%, hsla(49, 98%, 64%, 0) 70%);
+    }
+
+.custom-range {
+    margin: 10px 0 0 0;
+}
+
+.list-group-item-action:hover {
+    color: #f5f5f5;
+    background-color: #17a2b8;
+}
+
+.filelist div.filetitle{
+width: 300px;
+display: inline-block;
+font-weight:bold;}
+
+.filelist div.info {
+    width: 100px;
+    display: inline-block;
+}
