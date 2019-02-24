@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- <Context path="/wa1"/> -->
-<Context>
-<Parameter name="path" value="/wa1" override="false"/>
-<!-- filePath with end slash-->
-<Parameter name="filePath" value="/home/clod/java/"/>
+<Context path="/CreditForm">
+  <Parameter name="path" override="false" value="/wa1"/>
+  <!-- filePath with end slash
+  <Parameter name="filePath" value="/home/clod/java/"/>
+  <Parameter name="tempPath" value="/home/clod/java/temp"/>-->
+  <Parameter name="filePath" value="E:/temp_1/"/>
+  <Parameter name="tempPath" value="E:/temp"/>
 </Context>

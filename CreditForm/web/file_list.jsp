@@ -1,30 +1,5 @@
-<%-- 
-    Document   : index
-    Created on : 17 февр. 2019 г., 9:40:30
-    Author     : sendel
---%>
-<%@page import="sendel.bank.FileList"%>
-<%@page import="sendel.bank.FileUpload"%>
-<%@page import="sendel.bank.RequestTransformer"%>
-<%@page import="org.apache.tomcat.util.http.fileupload.servlet.ServletRequestContext"%>
-<%@page import="java.util.Iterator"%>
-<%@page import="java.io.File"%>
-<%@page import="org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload"%>
-<%@page import="org.apache.tomcat.util.http.fileupload.disk.DiskFileItemFactory"%>
-<%@page import="org.apache.tomcat.util.http.fileupload.FileItem"%>
-<%@page import="java.util.List"%>
-<%@page import="sendel.bank.CreditDecision"%>
-<%@page import="sendel.bank.FormCreditHandler"%>
-<%@page import="sendel.bank.JsonHandler"%>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<% request.setCharacterEncoding("UTF-8");
-//filePath with end slash
-ServletContext context = getServletContext();
-
-//set context.setAttribute fileList
-FileList fileList = new FileList(context);
-%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -45,7 +20,8 @@ FileList fileList = new FileList(context);
                 <div class="row">
                     <div class="col-6">
                         <a href="index.jsp" class="btn btn-info btn-sm" role="button">Заявка на кредит</a>
-                        <a href="file_list.jsp" class="btn btn-info btn-sm" role="button">Список загруженых файлов</a>
+                        <a href="filelist" class="btn btn-info btn-sm" role="button">Список принятых заявок</a>
+                        <a href="browsers" class="btn btn-info btn-sm" role="button">Статистика браузеров</a>
                     </div>
                     <div class="col-6 text-right">
                         <p class="subtitle">
@@ -63,12 +39,18 @@ FileList fileList = new FileList(context);
  
 
 <div class="list-group filelist">
-    <c:forEach items="${fileList}" var="files"  varStatus="сounter">
-        <a role="button" class="list-group-item list-group-item-action" href="download.jsp?f=${files.key}">
-            <div id="file-" class="filetitle" width="300px">${сounter.count}. ${files.key}</div> 
-            <c:forEach items="${files.value}" var="info"  varStatus="сounter1">
-                <div class="info">${info}</div>
-                </c:forEach>
+    <c:forEach items="${fileList.files}" var="file"  varStatus="сounter">
+        <a role="button" class="list-group-item list-group-item-action" 
+           <c:if test="${file.value.fileSize != ''}">href="download?f=${file.value.fileName}"
+               </c:if>>
+            <div id="file-" class="filetitle" width="300px">${сounter.count}. ${file.value.creditInfo}</div> 
+           
+                <div class="info">${file.value.giveCredit}</div>
+                
+                <div class="info">${file.value.fileName}</div>
+                <div class="info">${file.value.fileSize}</div>
+                <div class="info">${file.value.fileDate}</div>
+               
             
         </a>
 </c:forEach>

@@ -6,6 +6,8 @@
 package sendel.bank;
 
 import java.io.File;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
@@ -20,21 +22,26 @@ import org.apache.tomcat.util.http.fileupload.FileItem;
 public class FileUpload {
 
     private final HashMap<String, FileItem> requestFiles = new HashMap<>();
-    String filePath = "";
+    private ArrayList<String> uploadedFileNames = new ArrayList<>();
+    private String filePath = "";
 
     public FileUpload(Map<String, FileItem> requestFiles, String path) {
         this.requestFiles.putAll(requestFiles);
         filePath = path;
+        saveFileToDisk();
     }
 
-    public void saveFileToDisk() {
-        for (String fileName : requestFiles.keySet()) {
-            FileItem fileItem = requestFiles.get(fileName);
-            System.out.println(fileName + " -> " + fileItem.getName() + " " + fileItem.isInMemory());
+    private void saveFileToDisk() {
+        uploadedFileNames.clear();
+        for (String inputFormName : requestFiles.keySet()) {
+            FileItem fileItem = requestFiles.get(inputFormName);
+            if (fileItem.getName().equals("")) break;
+            System.out.println(inputFormName + " -> " + fileItem.getName() + " " + fileItem.isInMemory());
             String fileFullPath = filePath + System.currentTimeMillis() + "_" + cleanFileName(fileItem.getName());
             File file = new File(fileFullPath) ;
             try {
                 fileItem.write(file);
+                uploadedFileNames.add(file.getName());
             } catch (Exception ex) {
                 Logger.getLogger(FileUpload.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -43,5 +50,26 @@ public class FileUpload {
     
     private String cleanFileName(String fileName){
         return fileName.replaceAll("\\s", "_");
+    }
+
+    public ArrayList<String> getUploadedFileNames() {
+        return uploadedFileNames;
+    }
+    
+    
+    
+    //convert filename for save cyrillyc symbols
+    public static String getContentDespositionFilename(String fileName) {
+        try {
+           byte[] fileNameBytes = fileName.getBytes("utf-8");
+            String dispositionFileName = "";
+            for (byte b : fileNameBytes) {
+                dispositionFileName += (char) (b & 0xff);
+            }
+            return dispositionFileName;
+        } catch (UnsupportedEncodingException ex) {
+            ex.printStackTrace();
+        }
+        return fileName;
     }
 }

@@ -23,7 +23,6 @@ public class JsonHandler {
             if (key.startsWith(prefix)) {
                 for (String value : postMap.get(key)) {
                     requestList.put(key, value);
-                    System.out.println(">>> " +  key);
                 }
             }
 

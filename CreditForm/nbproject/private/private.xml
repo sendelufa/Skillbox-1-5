@@ -4,14 +4,17 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/E:/Skillbox/Java/M15/CreditForm/web/file_list.jsp</file>
-            <file>file:/E:/Skillbox/Java/M15/CreditForm/web/get_json_text.jsp</file>
+            <file>file:/E:/Skillbox/Java/M15/CreditForm/src/java/sendel/bank/Cookies.java</file>
+            <file>file:/E:/Skillbox/Java/M15/CreditForm/src/java/sendel/bank/SrvDowload.java</file>
+            <file>file:/E:/Skillbox/Java/M15/CreditForm/src/java/sendel/bank/SrvIndexPage.java</file>
             <file>file:/E:/Skillbox/Java/M15/CreditForm/src/java/sendel/bank/FileUpload.java</file>
             <file>file:/E:/Skillbox/Java/M15/CreditForm/src/java/sendel/bank/FormCreditHandler.java</file>
             <file>file:/E:/Skillbox/Java/M15/CreditForm/web/download.jsp</file>
             <file>file:/E:/Skillbox/Java/M15/CreditForm/web/get_json_file.jsp</file>
+            <file>file:/E:/Skillbox/Java/M15/CreditForm/src/java/sendel/bank/db/DBHandler.java</file>
             <file>file:/E:/Skillbox/Java/M15/CreditForm/src/java/sendel/bank/FileList.java</file>
             <file>file:/E:/Skillbox/Java/M15/CreditForm/web/META-INF/context.xml</file>
-            <file>file:/E:/Skillbox/Java/M15/CreditForm/web/index.jsp</file>
+            <file>file:/E:/Skillbox/Java/M15/CreditForm/src/java/sendel/bank/SrvFileList.java</file>
         </group>
     </open-files>
 </project-private>

@@ -22,9 +22,9 @@ public class FormCreditHandler {
         CheckValidDataFields();
         writeStatusValidForm();
         
-        for (String key : this.fieldsData.keySet()){
+        /*for (String key : this.fieldsData.keySet()){
             System.out.println("FormCreditHandler ->" + key + "=" + this.fieldsData.get(key)[0]);
-        }
+        }*/
 
     }
     
@@ -92,7 +92,7 @@ public class FormCreditHandler {
         fields.add(new CreditField("credit_employer", CreditField.REGEXP, ".+", "Не введен работодатель"));
         fields.add(new CreditField("credit_education", CreditField.REGEXP, "^\\d{1,2}$", "Не введено образование"));
         fields.add(new CreditField("credit_employer_industry", CreditField.REGEXP, ".+", "Не введено отрасль работы работодателя"));
-        fields.add(new CreditField("credit_tel", CreditField.REGEXP, "^[\\+]?[\\d\\s\\-\\(\\)]{11,}$", "неверный формат номера телефона"));
+        fields.add(new CreditField("credit_tel", CreditField.REGEXP, "^[\\+]?[\\d\\s\\-\\(\\)]{10,}$", "неверный формат номера телефона"));
         fields.add(new CreditField("credit_passport_number", CreditField.REGEXP, "^[\\d]{6}$", "Неверный номер паспорта"));
         fields.add(new CreditField("credit_family_status", CreditField.REGEXP, "^[12]{1}$", "Не введено семейное положение"));
         fields.add(new CreditField("credit_term", CreditField.REGEXP, "^[\\d]{1,2}$", "Неверный срок кредита"));

@@ -11,6 +11,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import org.apache.tomcat.util.http.fileupload.FileItem;
 import org.apache.tomcat.util.http.fileupload.disk.DiskFileItemFactory;
@@ -34,11 +35,12 @@ public final class RequestTransformer {
     private final int maxFileSize = 50000 * 1024;
     private final int maxMemSize = 5000 * 1024;
 
-    public RequestTransformer(HttpServletRequest request) {
+    public RequestTransformer(HttpServletRequest request, ServletContext context) {
         this.request = request;
         contentType = getContentType();
         factory.setSizeThreshold(maxMemSize);
-        factory.setRepository(new File("e:\\temp"));
+        
+        factory.setRepository(new File(context.getInitParameter("tempPath")));
     }
 
     //fill HashMaps with text fields and files fron form request
