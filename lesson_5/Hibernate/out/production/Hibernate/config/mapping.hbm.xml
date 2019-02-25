@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+
+<!--
+  ~ Hibernate, Relational Persistence for Idiomatic Java
+  ~
+  ~ License: GNU Lesser General Public License (LGPL), version 2.1 or later.
+  ~ See the lgpl.txt file in the root directory or <http://www.gnu.org/licenses/lgpl-2.1.html>.
+  -->
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="objects">
+
+    <class name="Department" table="department">
+        <id name="id" column="id">
+            <generator class="increment"/>
+        </id>
+        <property name="headId" unique="true" column="head_id" insert="false" update="false"/>
+        <property name="name" not-null="true"/>
+        <property name="description"/>
+        <set name="employees" table="employee" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="department_id" not-null="true"/>
+            </key>
+            <one-to-many class="objects.Employee"/>
+        </set>
+
+        <set name="vacations" table="vacation" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="department_id" not-null="true"/>
+            </key>
+            <one-to-many class="objects.Vacation"/>
+        </set>
+
+        <!--Используем head_id как ключ для таблицы Employee, "заменяя" значение на объект-->
+        <many-to-one name="employeeHead" class="objects.Employee" not-null="true" cascade="all" unique="true">
+            <column name="head_id"/>
+        </many-to-one>
+    </class>
+
+    <class name="Employee" table="employee">
+        <id name="id" column="id">
+            <generator class="increment"/>
+        </id>
+        <property name="hireDate" type="date" column="hire_date"/>
+        <property name="salary" type="int" column="salary"/>
+        <property name="name" not-null="true" type="string"/>
+        <property name="dep_id" column="department_id" insert="false" update="false"/>
+        <many-to-one name="department" class="objects.Department" fetch="select">
+            <column name="department_id" not-null="true"/>
+        </many-to-one>
+
+        <set name="vacations" table="vacation" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="employee_id" not-null="true"/>
+            </key>
+            <one-to-many class="objects.Vacation"/>
+        </set>
+    </class>
+
+    <!--Таблица отпусков-->
+    <class name="Vacation" table="vacation" >
+        <id name="id" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="employee_id" type="int" column="employee_id" insert="false" update="false" not-null="true"/>
+        <property name="id_approved" type="int" column="id_approved" insert="false" update="false" not-null="true"/>
+        <property name="date_start" type="date" column="date_start" not-null="true"/>
+        <property name="date_end" type="date" column="date_end" not-null="true"/>
+        <many-to-one name="employee" class="objects.Employee" fetch="select">
+            <column name="employee_id" not-null="true"/>
+        </many-to-one>
+        <many-to-one name="who_approved" class="objects.Employee" fetch="select">
+            <column name="id_approved" not-null="true"/>
+        </many-to-one>
+        <many-to-one name="departament" class="objects.Department" fetch="select">
+            <column name="department_id" not-null="true"/>
+        </many-to-one>
+        <property name="is_approved" type="boolean" column="is_approved"/>
+    </class>
+
+</hibernate-mapping>
