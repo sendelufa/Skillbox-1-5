@@ -1,3 +1,3 @@
-# Skillbox 1-15
+# Skillbox Java Разработчик (2015)
 
 all lessons in own branches
